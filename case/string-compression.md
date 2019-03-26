@@ -67,7 +67,6 @@ func stringCompression(input: String) -> String {
             current += 1
         }
         
-        print(output)
         return output
     }
 ```
