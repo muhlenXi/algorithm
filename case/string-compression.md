@@ -38,3 +38,36 @@
 ```
 
 #### Swift
+
+```swift
+func stringCompression(input: String) -> String {
+        var output = ""
+        
+        var current = 0
+        var next = 0
+        var repeatCount = 0
+        
+        while current < input.count {
+            repeatCount = 1
+            next = current + 1
+            
+            while next < input.count {
+                if input[String.Index(encodedOffset: current)] == input[String.Index(encodedOffset: next)] {
+                    repeatCount += 1
+                    current += 1
+                } else {
+                    break
+                }
+                next += 1
+            }
+            
+            output.append(input[String.Index(encodedOffset: current)])
+            output.append("\(repeatCount)")
+            
+            current += 1
+        }
+        
+        print(output)
+        return output
+    }
+```
