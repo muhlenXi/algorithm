@@ -26,7 +26,7 @@ public class ArrayStack {
         return value;
     }
 
-    public static void main(String[] args) {
+    public static void main() {
         ArrayStack stack = new ArrayStack(3);
 
         stack.push("2");
