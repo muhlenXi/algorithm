@@ -1,40 +1,52 @@
 版权声明：本文为 [muhlenXi](http://www.muhlenxi.com) 原创文章，未经博主允许不得转载，如有问题，欢迎指正。
 
 ## 排序
+
 排序就是将一组对象按照某种逻辑顺序重新排列的过程。
 
 # 选择排序
 
 [选择排序](https://zh.wikipedia.org/wiki/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F)（Selection Sort） 是一种简单直观的排序算法。
 
-排序算法（默认是升序）的原理是这样的。首先，找到数组中最小的那个元素，将它与数组中的第一个元素交换位置。（如果第一个元素就是最小元素，则自己和自己交换。）其次，在剩下的元素中找到最小的元素，将它与数组中的第二个元素交换位置。如此循环，直到将整个数组排序。
+排序算法（默认是升序）的原理是这样的。首先，找到数组中最小的那个元素，将它与数组中的第一个元素交换位置。（如果第一个元素就是最小元素，则跳过）然后依次在剩下的元素中找到最小的元素，将它与数组中的第二个元素交换位置。如此循环，直到将整个数组排序。
 
-对于长度为 $n$  的数组，选择排序需要大约  $n^2/2$ 次比较和 $n$ 次交换。
+对于一个长度为 **n** 的数组，选择排序在最坏的情况下需要大约  **n^2/2** 次比较和 **n** 次交换。
+
+## 思路分析
+
+假设我们做的是升序排序，主要思路是依次遍历数组中的每个元素，**当遍历到当前元素时，从当前元素开始到最后一个元素中寻找值最小的元素，如果能找到值最小元素，则与当前的元素做交换**。当遍历到最后一个元素时，排序也就完成了。
 
 ## 算法实现
+
+### Swift
 
 用 Swift 实现的选择排序代码如下所示：
 
 ```swift
 /// 选择排序
-func selectionSort(unsortedArray: inout [Int]) {
-    guard unsortedArray.count > 1 else {
+func selectionSort(array: inout [Int]){
+    guard array.count > 1 else {
         return
     }
-    
-    for i in 0 ..< unsortedArray.count {
-        var minIndex = i
-        for j in i+1 ..< unsortedArray.count {
-            if unsortedArray[j] < unsortedArray[minIndex] {
-                minIndex = j
+
+    for i in 0..<array.count {
+        var minValueIndex = i 
+        for j in i+1..<array.count {
+            if array[j] < array[minValueIndex] {
+                minValueIndex = j
             }
         }
-        if minIndex != i {
-            unsortedArray.swapAt(i, minIndex)
+        if minValueIndex != i {
+            let temp = array[i]
+            array[i] = array[minValueIndex]
+            array[minValueIndex] = temp
         }
     }
 }
 ```
+
+### Objective-C
+
 
 用 Objective-C 语言实现的算法如下：
 
@@ -62,6 +74,32 @@ func selectionSort(unsortedArray: inout [Int]) {
 }
 ```
 
+### Java
+
+```java
+public static int[] selectionSort(int[] array) {
+    if(array.length < 2) {
+        return array;
+    }
+
+    int[] result = array;
+    for(int i = 0; i < result.length; i ++) {
+        int minValueIndex = i;
+        for(int j = i + 1; j < result.length; j++) {
+            if (result[j] < result[minValueIndex]) {
+                minValueIndex = j;
+            }
+        }
+        if(minValueIndex != i) {
+            int temp = result[minValueIndex];
+            result[minValueIndex] = result[i];
+            result[i] = temp;
+        }
+    }
+    return result;
+}
+```
+
 ## 验证算法
 
 ```swift
@@ -74,10 +112,10 @@ selectionSort(unsortedArray: &list)
 print(list) 
 ```
 
-## 算法分析
+## 算法总结
 
 `稳定性` ：是稳定算法，因为排序过程中相邻会依次比较，不会打乱相同元素的相对位置。
 
-`空间复杂度`：整个排序过程是在原数组上进行排序的，所以是 O($1$)。
+`空间复杂度`：整个排序过程是在原数组上进行排序的，所以是 O(1)。
 
-`时间复杂度`：排序算法包含双层嵌套循环，故为 O（$n^2$）。
+`时间复杂度`：排序算法包含双层嵌套循环，故为 O（n^2）。

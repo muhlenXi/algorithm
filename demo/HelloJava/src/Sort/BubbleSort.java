@@ -1,3 +1,5 @@
+package Sort;
+
 public class BubbleSort {
     public static void main() {
         int[] list = {2, 3, 5, 7, 4, 8, 6 ,10 ,1, 9};
