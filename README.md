@@ -1,5 +1,11 @@
 # algorithm List
 
+## Array
+
+- [167. Two Sum II - Input array is sorted](/leetcode/167.md)
+
+## Sort
+
 - 1、[冒泡排序](/solutions/bubbleSort.md) 
 - 2、[选择排序](/solutions/selectionSort.md) 
 - 3、[插入排序](/solutions/insertionSort.md)
@@ -10,5 +16,3 @@
 - 8、[计数排序](/solutions/countingSort.md)
 - 9、[桶排序](/solutions/bucketSort.md)
 - 10、[基数排序](/solutions/radixSort.md)
-- 11、[字符串压缩](/solutions/string-compression.md)
-- 12、[两数之和](/solutions/2sum.md)
