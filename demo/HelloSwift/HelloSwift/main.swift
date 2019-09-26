@@ -8,7 +8,12 @@
 
 import Foundation
 
-var array = [5, 3, 6, 4, 1, 2]
-bubbleSort(array: &array)
-print(array)
+struct Shape {
+    var length: CGFloat = 0
+    var area: CGFloat = 0
+}
+
+struct Triangle: Shape {
+    
+}
 
