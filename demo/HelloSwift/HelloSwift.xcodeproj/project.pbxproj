@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C81D6986233CDC2200D0AD52 /* 167.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81D6985233CDC2200D0AD52 /* 167.swift */; };
 		C8C34D4A2333AA3000CD5225 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C34D492333AA3000CD5225 /* main.swift */; };
 		C8C34D642333ACE400CD5225 /* SelectionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C34D632333ACE400CD5225 /* SelectionSort.swift */; };
 		C8C34D672333B15400CD5225 /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C34D662333B15400CD5225 /* BubbleSort.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C81D6985233CDC2200D0AD52 /* 167.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 167.swift; sourceTree = "<group>"; };
 		C8C34D462333AA3000CD5225 /* HelloSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloSwift; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C34D492333AA3000CD5225 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C8C34D632333ACE400CD5225 /* SelectionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionSort.swift; sourceTree = "<group>"; };
@@ -42,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C81D6984233CDC0100D0AD52 /* leetcode */ = {
+			isa = PBXGroup;
+			children = (
+				C81D6985233CDC2200D0AD52 /* 167.swift */,
+			);
+			path = leetcode;
+			sourceTree = "<group>";
+		};
 		C8C34D3D2333AA3000CD5225 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +71,7 @@
 		C8C34D482333AA3000CD5225 /* HelloSwift */ = {
 			isa = PBXGroup;
 			children = (
+				C81D6984233CDC0100D0AD52 /* leetcode */,
 				C8C34D652333AD0800CD5225 /* Sort */,
 				C8C34D492333AA3000CD5225 /* main.swift */,
 			);
@@ -103,7 +114,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = muhlenXi;
 				TargetAttributes = {
 					C8C34D452333AA3000CD5225 = {
@@ -135,6 +146,7 @@
 			files = (
 				C8C34D642333ACE400CD5225 /* SelectionSort.swift in Sources */,
 				C8C34D4A2333AA3000CD5225 /* main.swift in Sources */,
+				C81D6986233CDC2200D0AD52 /* 167.swift in Sources */,
 				C8C34D672333B15400CD5225 /* BubbleSort.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +272,7 @@
 		C8C34D4E2333AA3000CD5225 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SQVPLJE24J;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -270,6 +283,7 @@
 		C8C34D4F2333AA3000CD5225 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SQVPLJE24J;
 				PRODUCT_NAME = "$(TARGET_NAME)";
