@@ -2,7 +2,11 @@
 
 ## Array
 
-- [167. Two Sum II - Input array is sorted](/leetcode/167.md)
+- [167. Two Sum II - Input array is sorted](./leetcode/167.md)
+
+
+## String
+- [387. First Unique Character in a String](./leetcode/387.md)
 
 ## Sort
 
