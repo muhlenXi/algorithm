@@ -8,7 +8,7 @@
 
 import Foundation
 
-func twoSum(_ numbers: [Int], _ target: Int) -> [Int] {
+func twoSum1(_ numbers: [Int], _ target: Int) -> [Int] {
     guard numbers.count > 1 else {
         return [Int]()
     }
