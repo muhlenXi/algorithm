@@ -8,6 +8,11 @@
 
 import Foundation
 
+let list1 = [1, 3, 5]
+let list2 = [2, 4, 6, 8, 10]
+
+let list3 = [2, 1, 8, 6, 5]
 
 
 
+print(mergeSort(array: list3))

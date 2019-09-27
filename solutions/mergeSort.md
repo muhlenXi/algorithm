@@ -2,51 +2,75 @@
 
 ## 归并排序
 
-[归并排序](https://zh.wikipedia.org/wiki/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F) （Merge Sort）是由 冯·诺伊曼 在 1945 年提出的算法。该算法也是采用 分治法 （Divide and Conquer）的策略。
+[归并排序](https://zh.wikipedia.org/wiki/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F) （Merge Sort）是由 冯·诺伊曼 在 1945 年提出的算法。该算法是 分治法 （Divide and Conquer）策略的代表之一。
 
-归并排序的原理是，首先递归的把当前序列平均分成两组，然后在保持元素顺序的同时将分割后的子序列合并到一起。
 
-一个长度为 $n$ 的序列，最坏和最好的情况下复杂度均为 $O(n log n)$。
+归并排序的核心思想是: 首先不断的将数组分为两个部分，直到每个部分包含一个元素为止，然后依次将两个部分合并到一起。
+
+一个长度为 **n** 的序列，最坏和最好的情况下复杂度均为 **O(n log n)**。
+
+## 算法分析
+
+编写归并排序的算法主要有 2 个步骤：
+
+- 1、编写 mergeTwoSortedArray 方法，该方法的功能是将两个有序的数组合并成一个有序数组。
+- 2、编写归并排序方法，该方法将数组分为两个部分，对左边部分数组递归排序，对右边部分数组递归排序，然后调用 `mergeTwoSortedArray` 方法将左、右数组合并成一个数组。
+
+编写递归代码的关键在于：要找到通项公式和递归终止条件。
 
 ## 算法实现
 
 用 Swift 实现的算法如下：
 
 ```swift
-// 归并
-func mergeSort(unsortedArray: [Int]) -> [Int]{
-    let len = unsortedArray.count
-    if len <= 1 {
-        return unsortedArray
+/// 合并两个有序数组
+func mergeTwoSortedArray(firstArray: [Int], secondArray: [Int]) -> [Int] {
+    guard firstArray.count > 0 else {
+        return secondArray
     }
-    let mid = len / 2
-    let leftArray = mergeSort(unsortedArray: Array(unsortedArray[0..<mid]))
-    let rightArray = mergeSort(unsortedArray: Array(unsortedArray[mid..<len]))
+    
+    guard secondArray.count > 0 else {
+        return firstArray
+    }
     
     var result = [Int]()
-    var leftIndex = 0
-    var rightIndex = 0
-    while leftIndex < leftArray.count && rightIndex < rightArray.count {
-        if leftArray[leftIndex] < rightArray[rightIndex] {
-            result.append(leftArray[leftIndex])
-            leftIndex += 1
+    var firstIndex = 0
+    var secondIndex = 0
+    while firstIndex < firstArray.count && secondIndex < secondArray.count {
+        let firstValue = firstArray[firstIndex]
+        let secondValue = secondArray[secondIndex]
+        if firstValue < secondValue {
+            result.append(firstValue)
+            firstIndex += 1
         } else {
-            result.append(rightArray[rightIndex])
-            rightIndex += 1
+            result.append(secondValue)
+            secondIndex += 1
         }
     }
     
-    while leftIndex < leftArray.count {
-        result.append(leftArray[leftIndex])
-        leftIndex += 1
+    if firstIndex < firstArray.count {
+        result.append(contentsOf: firstArray[firstIndex..<firstArray.count])
     }
-    while rightIndex < rightArray.count {
-        result.append(rightArray[rightIndex])
-        rightIndex += 1
+    if secondIndex < secondArray.count {
+        result.append(contentsOf: secondArray[secondIndex..<secondArray.count])
     }
     
     return result
 }
+
+/// 递归排序 分而治之
+func mergeSort(array: [Int]) -> [Int] {
+    guard array.count > 1 else {
+        return array
+    }
+    
+    let mid = array.count / 2
+    let leftArray = mergeSort(array: Array(array[0..<mid]))
+    let rightArray = mergeSort(array: Array(array[mid..<array.count]))
+    
+    return mergeTwoSortedArray(firstArray: leftArray, secondArray: rightArray)
+}
+
 ```
 
 用 Objective-C 实现的算法如下：
@@ -87,6 +111,12 @@ func mergeSort(unsortedArray: [Int]) -> [Int]{
 }
 ```
 
+用 Java 实现的算法如下：
+
+```java
+```
+
+
 ## 算法验证
 
 ```swift
@@ -94,14 +124,16 @@ var list = [2, 3, 5, 7, 4, 8, 6 ,10 ,1, 9]
 // 将会打印 [2, 3, 5, 7, 4, 8, 6 ,10 ,1, 9]
 print(list)
 // 将会打印归并排序后的序列 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print(mergeSort(unsortedArray: list))
+print(mergeSort(array: list))
 ```
 
-## 算法分析
+## 算法总结
 
 `稳定性`：稳定算法，序列分割的时候可能将相同元素分到不同组中，但是合并的时候相同元素的相对位置不会改变。
 
-`空间复杂度`：额外需要一个数组来保存排序结果，所以为 $O(n)$。
+`空间复杂度`：额外需要一个数组来保存排序结果，所以为 **O(n)**。
 
-`时间复杂度`：最好最坏都为 $O(nlogn)$。
+`时间复杂度`：最好最坏都为 **O(nlogn)**。
+
+`缺点`：不能对数组原地排序，创建一个新的数组。
 

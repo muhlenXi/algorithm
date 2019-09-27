@@ -10,6 +10,7 @@
 		C81D6986233CDC2200D0AD52 /* 167.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81D6985233CDC2200D0AD52 /* 167.swift */; };
 		C81D6988233CEAEC00D0AD52 /* InsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81D6987233CEAEC00D0AD52 /* InsertionSort.swift */; };
 		C81D698A233CEDD500D0AD52 /* 1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81D6989233CEDD500D0AD52 /* 1.swift */; };
+		C82A9821233E3C2200260B99 /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A9820233E3C2200260B99 /* MergeSort.swift */; };
 		C8C34D4A2333AA3000CD5225 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C34D492333AA3000CD5225 /* main.swift */; };
 		C8C34D642333ACE400CD5225 /* SelectionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C34D632333ACE400CD5225 /* SelectionSort.swift */; };
 		C8C34D672333B15400CD5225 /* BubbleSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C34D662333B15400CD5225 /* BubbleSort.swift */; };
@@ -32,6 +33,7 @@
 		C81D6985233CDC2200D0AD52 /* 167.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 167.swift; sourceTree = "<group>"; };
 		C81D6987233CEAEC00D0AD52 /* InsertionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort.swift; sourceTree = "<group>"; };
 		C81D6989233CEDD500D0AD52 /* 1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1.swift; sourceTree = "<group>"; };
+		C82A9820233E3C2200260B99 /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
 		C8C34D462333AA3000CD5225 /* HelloSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloSwift; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C34D492333AA3000CD5225 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C8C34D632333ACE400CD5225 /* SelectionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionSort.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				C8C34D632333ACE400CD5225 /* SelectionSort.swift */,
 				C8C34D662333B15400CD5225 /* BubbleSort.swift */,
 				C81D6987233CEAEC00D0AD52 /* InsertionSort.swift */,
+				C82A9820233E3C2200260B99 /* MergeSort.swift */,
 			);
 			path = Sort;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				C8C34D642333ACE400CD5225 /* SelectionSort.swift in Sources */,
 				C8E86BF8233D10EE0037740C /* 387.swift in Sources */,
+				C82A9821233E3C2200260B99 /* MergeSort.swift in Sources */,
 				C81D6988233CEAEC00D0AD52 /* InsertionSort.swift in Sources */,
 				C8C34D4A2333AA3000CD5225 /* main.swift in Sources */,
 				C81D698A233CEDD500D0AD52 /* 1.swift in Sources */,
