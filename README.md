@@ -2,13 +2,21 @@
 
 ## Array
 
-- [167. Two Sum II - Input array is sorted](./leetcode/167.md)
+- [167、Two Sum II - Input array is sorted](./leetcode/2019-09-25_L167.md)
 
 
 ## String
-- [387. First Unique Character in a String](./leetcode/387.md)
+- [387、First Unique Character in a String](./leetcode/2019-09-26_L387.md)
 
-## Sort
+## Hash table
+
+- [500、Keyboard Row](./leetcode/2019-09-27_L500.md)
+
+## Linked list
+
+- [203、Remove Linked List Elements](./leetcode/2019-09-28_L203.md)
+
+# Sort
 
 - 1、[冒泡排序](/solutions/bubbleSort.md) 
 - 2、[选择排序](/solutions/selectionSort.md) 
