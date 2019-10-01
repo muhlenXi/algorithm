@@ -8,7 +8,10 @@
 
 import Foundation
 
-struct Leetcode_387 {
+struct LeetcodeString {
+    
+    // MARK: - leetcode 387
+    
     func firstUniqChar(_ s: String) -> Int {
         var repeats = [Int](repeating: 0, count: 26)
         let a = 97
@@ -24,9 +27,9 @@ struct Leetcode_387 {
         
         return -1
     }
-}
 
-struct Leetcode_500 {
+    // MARK: - leetcode 500
+    
     func findWords(_ words: [String]) -> [String] {
         let dictionary = makeAlphabetDictionary()
         var results = [String]()

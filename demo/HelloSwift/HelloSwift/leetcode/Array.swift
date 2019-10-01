@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct Leetcode_1 {
+struct LeetcodeArray {
+    
+    // MARK: - leetcode 001
     /// 寻找目标数
     func twoSum(_ array: [Int], _ target: Int) -> [Int] {
         guard array.count > 1 else {
@@ -26,10 +28,8 @@ struct Leetcode_1 {
         
         return [Int]()
     }
-}
 
-
-struct Leetcode_167 {
+    // MARK: - leetcode 167
     func twoSum1(_ numbers: [Int], _ target: Int) -> [Int] {
         guard numbers.count > 1 else {
             return [Int]()

@@ -36,25 +36,6 @@ func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
     }
 }
 
-func reverseList(_ head: ListNode?) -> ListNode?{
-    var previous: ListNode? = nil
-    var current: ListNode? = head
-    var next: ListNode? = head?.next
-    
-    while current != nil {
-        /// 将当前节点的 next 指向已反转好的列表，构成新的已反转列表
-        current?.next = previous
-        /// previous 指向新的已反转列表
-        previous = current
-        
-        /// 更新 当前 节点
-        current = next
-        /// 更新 next 节点
-        next = current?.next
-    }
-    
-    return previous
-}
 
 func removeElements(_ head: ListNode?, _ val: Int) -> ListNode? {
     guard let head = head else {
@@ -73,24 +54,31 @@ func printList(_ head: ListNode?) {
     }
 }
 
-let node0 = ListNode(3)
-let node1 = ListNode(3)
-let node2 = ListNode(3)
-let node3 = ListNode(1)
-let node4 = ListNode(3)
-let node5 = ListNode(5)
-let node6 = ListNode(3)
 
+
+let node0 = ListNode(1)
+let node1 = ListNode(2)
+let node2 = ListNode(3)
+let node3 = ListNode(4)
+let node4 = ListNode(5)
+let node5 = ListNode(6)
+let node6 = ListNode(4)
 
 node0.next = node1
 node1.next = node2
 node2.next = node3
 node3.next = node4
-node4.next = node5
-node5.next = node6
 
-let re = removeElements(node0, 3)
-printList(re)
+node4.next = node5
+//node5.next = node6
+
+
+
+printList(node0)
+let node100 = reverseList(node0)
+print("--------------")
+
+printList(node100)
 
 
 

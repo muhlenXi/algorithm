@@ -14,7 +14,10 @@
 
 ## Linked list
 
+- [83、Remove Duplicates from Sorted List](./leetcode/2019-10-01_L83.md)
 - [203、Remove Linked List Elements](./leetcode/2019-09-28_L203.md)
+- [206、Reverse Linked List](./leetcode/2019-09-30_L206.md)
+-  [876、Middle of the Linked List](./leetcode/2019-09-29_L876.md)
 
 # Sort
 
