@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct LeetcodeArray {
+struct Leetcode_Array {
     
     // MARK: - leetcode 001
     /// 寻找目标数

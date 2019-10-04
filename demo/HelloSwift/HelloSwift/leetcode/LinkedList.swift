@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct LeetcodeLinkedList {
+struct Leetcode_LinkedList {
     // MARK: - leetcode 83
     /// 移除链表中重复元素
     func deleteDuplicates(_ head: ListNode?) -> ListNode? {
