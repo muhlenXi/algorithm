@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct LeetcodeString {
+struct Leetcode_String {
     
     // MARK: - leetcode 387
     

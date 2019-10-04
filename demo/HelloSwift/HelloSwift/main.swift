@@ -36,16 +36,6 @@ func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
     }
 }
 
-
-func removeElements(_ head: ListNode?, _ val: Int) -> ListNode? {
-    guard let head = head else {
-        return nil
-    }
-    
-    head.next = removeElements(head.next, val)
-    return head.val == val ? head.next : head
-}
-
 func printList(_ head: ListNode?) {
     var currentNode: ListNode? = head
     while currentNode != nil {
@@ -72,13 +62,33 @@ node3.next = node4
 node4.next = node5
 //node5.next = node6
 
+let numbers = [8]
+let target = 8
 
+// MARK: - leetcode 704
+/// 二分查找
+func search(_ nums: [Int], _ target: Int) -> Int {
+    
+    var low = 0
+    var high = numbers.count-1
+    
+    while low <= high {
+        let middle  = (low + high) / 2
+        
+        if numbers[middle] == target {
+            return middle
+        } else if numbers[middle] > target {
+            high = middle-1
+        } else {
+            low = middle+1
+        }
+    }
+    
+    return -1
+}
 
-printList(node0)
-let node100 = reverseList(node0)
-print("--------------")
+print(search(numbers, target))
 
-printList(node100)
 
 
 
