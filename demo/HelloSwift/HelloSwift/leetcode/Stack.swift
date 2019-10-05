@@ -57,8 +57,7 @@ class MinStack {
 }
 
 struct Leetcode_Stack {
-    // MARK: - leetcode 20
-
+    // 栈数据结构
     class Stack<T> {
         private var array: [T]
         
@@ -70,6 +69,10 @@ struct Leetcode_Stack {
             return array.last
         }
         
+        var containers: [T] {
+           return array
+        }
+        
         init() {
             array = [T]()
         }
@@ -78,12 +81,16 @@ struct Leetcode_Stack {
             array.append(element)
         }
         
-        func pop() -> T {
+        func pop() -> T? {
+            guard !isEmpty else {
+                return nil
+            }
+            
             return array.removeLast()
         }
     }
 
-
+    // MARK: - leetcode 20
     func isValid(_ s: String) -> Bool {
         if s.count == 0 {
             return true
@@ -108,5 +115,43 @@ struct Leetcode_Stack {
         
         return stack.isEmpty && invalid.isEmpty
     }
+    
+    // MARK: - leetcode 844
+    func backspaceCompare(_ S: String, _ T: String) -> Bool {
+        let sStack = Stack<Character>()
+        let tStack = Stack<Character>()
+        let backspace = Character("#")
+        
+        for element in S {
+            if element == backspace {
+                _ = sStack.pop()
+            } else {
+                sStack.push(element: element)
+            }
+        }
+        for element in T {
+            if element == backspace {
+                _ = tStack.pop()
+            } else {
+                tStack.push(element: element)
+            }
+        }
+        
+        return String(sStack.containers) == String(tStack.containers)
+    }
 
+    
+    // MARK: - leetcode 1047
+    func removeDuplicates(_ S: String) -> String {
+        let stack = Stack<Character>()
+        for character in S {
+            if let top = stack.topElement, top == character {
+                _ = stack.pop()
+            } else {
+                stack.push(element: character)
+            }
+        }
+        
+        return String(stack.containers)
+    }
 }

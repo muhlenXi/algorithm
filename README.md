@@ -15,9 +15,12 @@
 
 ## Leetcode list
 
+Divide by tags.
+
 ### Array
 
 - [167. Two Sum II - Input array is sorted](./leetcode/2019-09-25_L167.md)
+- [1002. Find Common Characters](./leetcode/2019-10-06_L1002.md)
 
 ### String
 
@@ -39,6 +42,8 @@
 
 - [20. Valid Parentheses](./leetcode/2019-10-05_L20.md)
 - [155. Min Stack](./leetcode/2019-10-03_L155.md)
+- [844. Backspace String Compare](./leetcode/2019-10-04_L844.md)
+- [1047. Remove All Adjacent Duplicates In String](./leetcode/2019-10-04_L1047.md)
 
 ### Math
 
@@ -58,3 +63,9 @@
 
 - [53. Maximum Subarray](./leetcode/2019-10-04_L53.md)
 - [169. Majority Element](./leetcode/2019-10-03_L169.md)
+
+### Sort
+
+- [242. Valid Anagram](./leetcode/2019-10-05_L242.md)
+- [349.  Intersection of Two Arrays](./leetcode/2019-10-05_L349.md)
+- [350. Intersection of Two Arrays II](./leetcode/2019-10-06_L350.md)
