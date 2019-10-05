@@ -14,14 +14,14 @@ struct Leetcode_BinaraySearch {
     func search(_ nums: [Int], _ target: Int) -> Int {
         
         var low = 0
-        var high = numbers.count-1
+        var high = nums.count-1
         
         while low <= high {
             let middle  = (low + high) / 2
             
-            if numbers[middle] == target {
+            if nums[middle] == target {
                 return middle
-            } else if numbers[middle] > target {
+            } else if nums[middle] > target {
                 high = middle-1
             } else {
                 low = middle+1

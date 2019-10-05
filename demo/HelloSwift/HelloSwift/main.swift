@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class ListNode {
+class ListNode {
     public var val: Int
     public var next: ListNode?
     
@@ -19,7 +19,6 @@ public class ListNode {
 }
 
 func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
-    
     if l1 == nil {
         return l2
     }
@@ -62,33 +61,60 @@ node3.next = node4
 node4.next = node5
 //node5.next = node6
 
-let numbers = [8]
-let target = 8
 
-// MARK: - leetcode 704
-/// 二分查找
-func search(_ nums: [Int], _ target: Int) -> Int {
+// MARK: - leetcode 20
+
+class Stack<T> {
+    private var array: [T]
     
-    var low = 0
-    var high = numbers.count-1
+    var isEmpty: Bool {
+        return array.count == 0
+    }
     
-    while low <= high {
-        let middle  = (low + high) / 2
-        
-        if numbers[middle] == target {
-            return middle
-        } else if numbers[middle] > target {
-            high = middle-1
+    var topElement: T? {
+        return array.last
+    }
+    
+    init() {
+        array = [T]()
+    }
+    
+    func push(element: T) {
+        array.append(element)
+    }
+    
+    func pop() -> T {
+        return array.removeLast()
+    }
+}
+
+
+func isValid(_ s: String) -> Bool {
+    if s.count == 0 {
+        return true
+    }
+    
+    let map: [Character: Character] = ["{": "}", "(": ")", "[": "]"]
+    let keys: [Character] = ["{", "[", "("]
+    
+    let stack = Stack<Character>()
+    let invalid = Stack<Character>()
+    for c in s {
+        if keys.contains(c) {
+            stack.push(element: c)
         } else {
-            low = middle+1
+            if let top = stack.topElement, let v = map[top], v == c {
+                _ = stack.pop()
+            } else {
+                invalid.push(element: c)
+            }
         }
     }
     
-    return -1
+    return stack.isEmpty && invalid.isEmpty
 }
 
-print(search(numbers, target))
-
-
-
+let input = "{{{}}}"
+let output = isValid(input)
+print(output)
 
