@@ -45,6 +45,15 @@ Divide by tags.
 - [844. Backspace String Compare](./leetcode/2019-10-04_L844.md)
 - [1047. Remove All Adjacent Duplicates In String](./leetcode/2019-10-04_L1047.md)
 
+## Heap
+
+- [703. Kth Largest Element in a Stream](./leetcode/2019-10-06_L703.md)
+
+## Tree
+
+- [965. Univalued Binary Tree](./leetcode/2019-10-06_L965.md)
+
+
 ### Math
 
 - [69. Sqrt(x)](./leetcode/2019-10-02_L69.md)
