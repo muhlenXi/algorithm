@@ -3,7 +3,7 @@
 ## Sort
 
 |name|note|
-|:--:|:--:|
+|:--|:--:|
 |1、[冒泡排序](/solutions/bubbleSort.md)| ✅|
 |2、[选择排序](/solutions/selectionSort.md)| ✅|
 |3、[插入排序](/solutions/insertionSort.md)|✅|
