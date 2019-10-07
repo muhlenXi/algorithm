@@ -22,6 +22,7 @@ class TreeNode {
 
 struct Leetcode_Tree {
     // MARK: - leetcode 100
+    
     func isSameTree(_ p: TreeNode?, _ q: TreeNode?) -> Bool {
         if p == nil && q != nil {
             return false
@@ -50,6 +51,7 @@ struct Leetcode_Tree {
     }
 
     // MARK: - leetcode 404
+    
     // 404
     func sumOfLeftLeaves(_ root: TreeNode?) -> Int {
         var output = 0
@@ -71,6 +73,7 @@ struct Leetcode_Tree {
     }
     
     // MARK: - leetcode 501
+    
     // 501
     func findMode(_ root: TreeNode?) -> [Int] {
         var map = [Int: Int]()
@@ -103,7 +106,41 @@ struct Leetcode_Tree {
         calculateRepeats(node: node.right, map: &map, maxRepeats: &maxRepeats)
     }
     
+    // MARK: - leetcode 607
+
+    // 607
+    func findSecondMinimumValue(_ root: TreeNode?) -> Int {
+        var list = [Int]()
+        traversal(node: root, array: &list)
+        if list.count == 2 {
+            return list.first!
+        }
+        return -1
+    }
+
+    func traversal(node: TreeNode?, array: inout [Int]) {
+        guard let node = node else {
+            return
+        }
+        
+        // a0 > a1
+        if array.count < 2, !array.contains(node.val) {
+            array.append(node.val)
+        }
+        if array.count == 2, node.val < array[0], !array.contains(node.val) {
+            array[0] = node.val
+        }
+        if array.count == 2, array[0] < array[1] {
+            array.swapAt(0, 1)
+        }
+        
+        traversal(node: node.left, array: &array)
+        traversal(node: node.right, array: &array)
+    }
+
+    
     // MARK: - leetcode 965
+    
     // 965
     func isUnivalTree(_ root: TreeNode?) -> Bool {
         guard let node = root else {

@@ -27,6 +27,47 @@ struct Leetcode_String {
         
         return -1
     }
+    
+    // MARK: - leetcode 443
+
+    // 443
+    func compress(_ chars: inout [Character]) -> Int {
+        guard chars.count > 0 else {
+            return 0
+        }
+        
+        var character: Character = chars[0]
+        var output = [Character]()
+        var index = 1
+        var repeats = 1
+        
+        while index < chars.count {
+            if chars[index] == character {
+                repeats += 1
+                index += 1
+            } else {
+                reduce(chars: &output, c: character, repeats: repeats)
+                
+                character = chars[index]
+                repeats = 1
+                index += 1
+            }
+        }
+        
+        reduce(chars: &output, c: character, repeats: repeats)
+        
+        chars = output
+        return output.count
+    }
+
+    func reduce(chars: inout [Character], c: Character, repeats: Int){
+        chars.append(c)
+        if repeats > 1 {
+            let r: [Character] = "\(repeats)".map {$0}
+            chars.append(contentsOf: r)
+        }
+    }
+
 
     // MARK: - leetcode 500
     
