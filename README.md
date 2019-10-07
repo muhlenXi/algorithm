@@ -53,6 +53,9 @@ Divide by tags.
 
 ## Tree
 
+- [100. Same Tree](./leetcode/2019-10-07_L100.md)
+- [404. Sum of Left Leaves](./leetcode/2019-10-07_L404.md)
+- [501. Find Mode in Binary Search Tree](./leetcode/2019-10-07_L501.md)
 - [965. Univalued Binary Tree](./leetcode/2019-10-06_L965.md)
 
 

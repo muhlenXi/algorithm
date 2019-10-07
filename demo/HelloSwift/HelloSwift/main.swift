@@ -27,11 +27,13 @@ import Foundation
 
 
 var node0 = TreeNode(1)
-var node1 = TreeNode(1)
-var node2 = TreeNode(2)
-var node3 = TreeNode(1)
-var node4 = TreeNode(1)
-var node5 = TreeNode(1)
+var node1 = TreeNode(2)
+var node2 = TreeNode(3)
+
+var node3 = TreeNode(3)
+var node4 = TreeNode(4)
+var node5 = TreeNode(5)
+var node6 = TreeNode(2)
 
 node0.left = node1
 node0.right = node2
@@ -39,16 +41,11 @@ node0.right = node2
 node1.left = node3
 node1.right = node4
 
-node2.right = node5
+node2.left = node5
+node2.right = node6
 
-func visitTree(_ root: TreeNode?, array: inout [Int]) {
-    if root == nil {
-        return
-    }
-    
-    array.append(root!.val)
-    visitTree(root?.left, array: &array)
-    visitTree(root?.right, array: &array)
-}
+
+
+print(findMode(node0))
 
 
