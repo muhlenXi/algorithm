@@ -47,10 +47,8 @@ node0.right = node2
 //node2.left = node5
 //node2.right = node6
 
-var c: [Character] = ["a","b","b","b","b","b","b","b","b","b","b","b","b"]
 
 
-print(compress(&c))
-print(c)
 
-
+let text = "ballon"
+print(maxNumberOfBalloons(text))

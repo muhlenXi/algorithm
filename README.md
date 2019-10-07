@@ -28,6 +28,7 @@ Divide by tags.
 
 - [387. First Unique Character in a String](./leetcode/2019-09-26_L387.md)
 - [443. String Compression](./leetcode/2019-10-06_L443.md)
+- [1189. Maximum Number of Balloons](./leetcode/2019-10-08_L1189.md)
 
 ### Hash table
 

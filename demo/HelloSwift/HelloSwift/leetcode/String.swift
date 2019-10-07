@@ -105,4 +105,32 @@ struct Leetcode_String {
         return dictionary
     }
 
+    // MARK: - leetcode 1189
+
+    func maxNumberOfBalloons(_ text: String) -> Int {
+        // 清零
+        let ballon: [Character] = "balloon".map {$0}
+        var map = [Character: Int]()
+        for e in ballon {
+            map[e] = 0
+        }
+        // 统计
+        for element in text {
+            if let r = map[element] {
+                map[element] = r + 1
+            }
+        }
+        // 最小值
+        var output = map.values.first!
+        for (k, v) in map {
+            var repeats = v
+            if k == Character("l") || k == Character("o") {
+                repeats = v / 2
+            }
+            if repeats < output {
+                output = repeats
+            }
+        }
+        return output
+    }
 }
