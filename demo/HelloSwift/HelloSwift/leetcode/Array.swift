@@ -56,6 +56,41 @@ struct Leetcode_Array {
         return [Int]()
     }
     
+    // MARK: - leetcode 454
+    func fourSumCount(_ A: [Int], _ B: [Int], _ C: [Int], _ D: [Int]) -> Int {
+        var output = 0
+        
+        var map1 = [Int: Int]()
+        var map2 = [Int: Int]()
+        
+        for i in 0..<A.count {
+            for j in 0..<B.count {
+                let sum1 = A[i] + B[j]
+                let sum2 = C[i] + D[j]
+                
+                if let counts = map1[sum1] {
+                    map1[sum1] = counts + 1
+                } else {
+                     map1[sum1] = 1
+                }
+                
+                if let counts = map2[sum2] {
+                    map2[sum2] = counts + 1
+                } else {
+                     map2[sum2] = 1
+                }
+            }
+        }
+        
+        for (k, v1) in map1 {
+            if let v2 = map2[0-k] {
+                output += v1*v2
+            }
+        }
+        
+        return output
+    }
+    
     // MARK: - leetcode 1002
     
     /// 寻找两个字符串中的交集字符串
