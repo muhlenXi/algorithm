@@ -21,6 +21,7 @@ Divide by tags.
 
 ### Array
 
+- [1. Two Sum](./leetcode/2019-10-08_L1.md)   2️⃣
 - [167. Two Sum II - Input array is sorted](./leetcode/2019-09-25_L167.md)
 - [1002. Find Common Characters](./leetcode/2019-10-06_L1002.md)
 
@@ -61,6 +62,10 @@ Divide by tags.
 - [671. Second Minimum Node In a Binary Tree](./leetcode/2019-10-07_L671.md)
 - [965. Univalued Binary Tree](./leetcode/2019-10-06_L965.md)
 
+## Depth First Search
+
+- [104. Maximum Depth of Binary Tree](./leetcode/2019-10-09_L104.md)
+- [111. Minimum Depth of Binary Tree](./leetcode/2019-10-09_L111.md)
 
 ### Math
 
