@@ -8,19 +8,21 @@
 
 import Foundation
 
-// MARK: - leetcode 1
 
-func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-    var map = [Int: Int]()
-    for (index, element) in nums.enumerated() {
-        if let index0 = map[target-element] {
-            return [index0, index]
-        } else {
-            map[element] = index
-        }
-    }
-    
-    return [Int]()
-}
 
-print(twoSum([2, 7, 11, 15], 9))
+
+
+let node1 = TreeNode(1)
+let node2 = TreeNode(2)
+let node3 = TreeNode(3)
+let node4 = TreeNode(4)
+
+node1.left = node2
+node1.right = node3
+
+node3.left = node4
+
+print(minDepth(node1))
+print(maxDepth(node1))
+
+
