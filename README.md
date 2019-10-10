@@ -22,15 +22,15 @@ Divide by tags.
 ### Array
 
 - [1. Two Sum](./leetcode/2019-10-08_L1.md)   2️⃣
-- [167. Two Sum II - Input array is sorted](./leetcode/2019-09-25_L167.md) 2️⃣
-- [1002. Find Common Characters](./leetcode/2019-10-06_L1002.md) 2️⃣
+- [167. Two Sum II - Input array is sorted](./leetcode/2019-09-25_L167.md)   2️⃣
+- [1002. Find Common Characters](./leetcode/2019-10-06_L1002.md)  2️⃣
 - [1200. Minimum Absolute Difference](./leetcode/2019-10-06_L1200.md)
 
 ### String
-
-- [387. First Unique Character in a String](./leetcode/2019-09-26_L387.md)2️⃣
+  
+- [387. First Unique Character in a String](./leetcode/2019-09-26_L387.md)  2️⃣
 - [443. String Compression](./leetcode/2019-10-06_L443.md)
-- [1189. Maximum Number of Balloons](./leetcode/2019-10-08_L1189.md) 2️⃣
+- [1189. Maximum Number of Balloons](./leetcode/2019-10-08_L1189.md)  2️⃣
 
 ### Hash table
 
@@ -42,7 +42,7 @@ Divide by tags.
 - [21. Merge Two Sorted Lists](./leetcode/2019-10-04_L21.md)
 - [83. Remove Duplicates from Sorted List](./leetcode/2019-10-01_L83.md)
 - [203. Remove Linked List Elements](./leetcode/2019-09-28_L203.md)
-- [206. Reverse Linked List](./leetcode/2019-09-30_L206.md)2️⃣
+- [206. Reverse Linked List](./leetcode/2019-09-30_L206.md) 2️⃣
 -  [876. Middle of the Linked List](./leetcode/2019-09-29_L876.md)
 
 ## Stack 
