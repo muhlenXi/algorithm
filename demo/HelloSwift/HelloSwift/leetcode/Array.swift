@@ -131,6 +131,31 @@ struct Leetcode_Array {
 
         return common.map {"\($0)"}
     }
+    
+    // MARK: - leetcode 1200
+    func minimumAbsDifference(_ arr: [Int]) -> [[Int]] {
+        var array = arr
+        array.sort()
+        guard array.count > 2 else {
+            return [array]
+        }
+        
+        var output = [[Int]]()
+        var minDifference = Int.max
+        
+        for index in 0..<array.count-1 {
+            let difference = array[index+1] - array[index]
+            if difference == minDifference {
+                output.append([array[index], array[index+1]])
+            } else if difference < minDifference {
+                output.removeAll()
+                minDifference = difference
+                output.append([array[index], array[index+1]])
+            }
+        }
+        
+        return output
+    }
 }
 
 

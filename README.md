@@ -22,8 +22,9 @@ Divide by tags.
 ### Array
 
 - [1. Two Sum](./leetcode/2019-10-08_L1.md)   2️⃣
-- [167. Two Sum II - Input array is sorted](./leetcode/2019-09-25_L167.md)
-- [1002. Find Common Characters](./leetcode/2019-10-06_L1002.md)
+- [167. Two Sum II - Input array is sorted](./leetcode/2019-09-25_L167.md) 2️⃣
+- [1002. Find Common Characters](./leetcode/2019-10-06_L1002.md) 2️⃣
+- [1200. Minimum Absolute Difference](./leetcode/2019-10-06_L1200.md)
 
 ### String
 
@@ -33,6 +34,7 @@ Divide by tags.
 
 ### Hash table
 
+- [454. 4Sum II](./leetcode/2019-10-09_L454.md)
 - [500. Keyboard Row](./leetcode/2019-09-27_L500.md)
 
 ### Linked list
