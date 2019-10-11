@@ -24,6 +24,7 @@ Divide by tags.
 - [1. Two Sum](./leetcode/2019-10-08_L1.md)   2️⃣
 - [167. Two Sum II - Input array is sorted](./leetcode/2019-09-25_L167.md)   2️⃣
 - [1002. Find Common Characters](./leetcode/2019-10-06_L1002.md)  2️⃣
+- [1185. Day of the Week](./leetcode/2019-10-10_L1185.md)
 - [1200. Minimum Absolute Difference](./leetcode/2019-10-06_L1200.md)
 
 ### String
@@ -81,7 +82,9 @@ Divide by tags.
 
 ### Binary Search 
 
-- [704. Binary Search](./leetcode/2019-10-02_L704.md)
+- [410. Split Array Largest Sum](./leetcode/2019-10-11_L410.md)
+- [658. Find K Closest Elements](./leetcode/2019-10-10_L658.md)
+- [704. Binary Search](./leetcode/2019-10-02_L704.md) 2️⃣
 
 ### Divide and Conquer
 
