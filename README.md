@@ -27,6 +27,10 @@ Divide by tags.
 - [1185. Day of the Week](./leetcode/2019-10-10_L1185.md)
 - [1200. Minimum Absolute Difference](./leetcode/2019-10-06_L1200.md)
 
+## Dynamic Programming
+
+- [718. Maximum Length of Repeated Subarray](./leetcode/2019-10-14_L718.md)
+
 ### String
   
 - [387. First Unique Character in a String](./leetcode/2019-09-26_L387.md)  2️⃣
