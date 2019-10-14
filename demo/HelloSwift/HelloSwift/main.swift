@@ -9,10 +9,5 @@
 import Foundation
 
 
-let nums = [1, 2, 5, 8, 10]
-let m = 12
-
-
-print(search(nums, m))
 
 
