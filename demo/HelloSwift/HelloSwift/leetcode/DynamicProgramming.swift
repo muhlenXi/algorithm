@@ -14,11 +14,11 @@ struct Leetcode_DP {
     
     func findLength(_ A: [Int], _ B: [Int]) -> Int {
         var maxLength = 0
-        var dp: [[Int]] = [[Int]](repeating: [Int](repeating: 0, count: b.count), count: a.count)
+        var dp: [[Int]] = [[Int]](repeating: [Int](repeating: 0, count: B.count), count: A.count)
         
-        for i in 0..<a.count {
-            for j in 0..<b.count {
-                if a[i] == b [j] {
+        for i in 0..<A.count {
+            for j in 0..<B.count {
+                if A[i] == B[j] {
                     if i - 1 >= 0 && j - 1 >= 0 {
                         dp[i][j] = dp[i-1][j-1]+1
                     } else {

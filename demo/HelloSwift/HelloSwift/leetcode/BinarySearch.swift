@@ -10,8 +10,44 @@ import Foundation
 
 struct Leetcode_BinaraySearch {
     
-    // MARK: leetcode 410. Split Array Largest Sum
+    // MARK: - Leetcode 378. Kth Smallest Element in a Sorted Matrix
+    /// 378
+    func kthSmallest(_ matrix: [[Int]], _ k: Int) -> Int {
+        var low = matrix[0][0]
+        var high = matrix[matrix.count-1][matrix.count-1]
+        var mid = 0
+        var counts = 0
+        
+        while low < high {
+            mid = low + (high-low)/2
+            counts = countsNumberIn(matrix: matrix, target: mid)
+            if counts < k {
+                low = mid + 1
+            } else {
+                high = mid
+            }
+        }
+        
+        return low
+    }
 
+    /// 统计小于等于 target 的个数
+    func countsNumberIn(matrix: [[Int]], target: Int) -> Int {
+        var count = 0
+        for i in 0..<matrix.count {
+            for j in 0..<matrix.count {
+                if matrix[i][j] <= target {
+                    count += 1
+                } else {
+                    break
+                }
+            }
+        }
+        return count
+    }
+
+    
+    // MARK: leetcode 410. Split Array Largest Sum
     // 410
     func splitArray(_ nums: [Int], _ m: Int) -> Int {
         guard nums.count > 0 else {
@@ -126,5 +162,41 @@ struct Leetcode_BinaraySearch {
             }
         }
         return -1
+    }
+    
+    // MARK: - Leetcode 719. Find K-th Smallest Pair Distance
+    /// 719
+    func smallestDistancePair(_ nums: [Int], _ k: Int) -> Int {
+        let numbers = nums.sorted()
+        
+        var low = 0
+        var high = numbers[numbers.count-1] - numbers[0]
+        var mid = 0
+        var count = 0
+        
+        while low < high {
+            mid = low + (high-low)/2
+            count = countsNumberInList(numbers, target: mid)
+            if count < k {
+                low = mid + 1
+            } else {
+                high = mid
+            }
+        }
+        return low
+    }
+
+    /// 统计小于等于 target 的个数
+    func countsNumberInList(_ list: [Int], target: Int) -> Int {
+        var count = 0
+        for i in 0..<list.count {
+            let begin = i + 1
+            var end = i + 1
+            while end < list.count && list[end]-list[i] <= target {
+                end += 1
+            }
+            count += (end - begin)
+        }
+        return count
     }
 }

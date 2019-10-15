@@ -86,9 +86,11 @@ Divide by tags.
 
 ### Binary Search 
 
+- [378. Kth Smallest Element in a Sorted Matrix](./leetcode/2019-10-15_L378.md)
 - [410. Split Array Largest Sum](./leetcode/2019-10-11_L410.md)
 - [658. Find K Closest Elements](./leetcode/2019-10-10_L658.md)
 - [704. Binary Search](./leetcode/2019-10-02_L704.md) 2️⃣
+- [719. Find K-th Smallest Pair Distance](./leetcode/2019-10-15_L719.md)
 
 ### Divide and Conquer
 
