@@ -1,4 +1,3 @@
-
 import math
 import heapq
 
@@ -33,6 +32,7 @@ def bfs(graph, s):
 	while len(queue) > 0:
 		vertex = queue.pop(0)
 		nodes = graph[vertex]
+
 		for n in nodes:
 			if n not in seen:
 				queue.append(n)
@@ -82,4 +82,3 @@ print(parent)
 #parent, distance = dijkstra(graph1, "A")
 #print(parent)
 #print(distance)
-
