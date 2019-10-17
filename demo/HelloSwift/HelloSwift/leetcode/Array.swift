@@ -131,6 +131,58 @@ struct Leetcode_Array {
 
         return common.map {"\($0)"}
     }
+    
+    // MARK: - leetcode 1185
+    
+    /// 1185
+    func dayOfTheWeek(_ day: Int, _ month: Int, _ year: Int) -> String {
+        let weeks = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        
+        var y = year
+        let d = day
+        var m = month
+        if m == 1 || m == 2 {
+            m += 12
+            y -= 1
+        }
+        // 基姆拉尔森计算公式 Kim larsen calculation formula
+        let week: Int = (d + 2*m + 3*(m+1)/5 + y + y/4 - y/100 + y/400 + 1) % 7
+        return weeks[week]
+    }
+
+    func isLeapYear(_ year: Int) -> Bool {
+        var isLeap = false
+        if year % 400 == 0 || (year % 4 == 0 && year % 100 != 0) {
+            isLeap = true
+        }
+        return isLeap
+    }
+
+    
+    // MARK: - leetcode 1200
+    func minimumAbsDifference(_ arr: [Int]) -> [[Int]] {
+        var array = arr
+        array.sort()
+        guard array.count > 2 else {
+            return [array]
+        }
+        
+        var output = [[Int]]()
+        var minDifference = Int.max
+        
+        for index in 0..<array.count-1 {
+            let difference = array[index+1] - array[index]
+            if difference == minDifference {
+                output.append([array[index], array[index+1]])
+            } else if difference < minDifference {
+                output.removeAll()
+                minDifference = difference
+                output.append([array[index], array[index+1]])
+            }
+        }
+        
+        return output
+    }
 }
 
 

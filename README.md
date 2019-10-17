@@ -22,17 +22,24 @@ Divide by tags.
 ### Array
 
 - [1. Two Sum](./leetcode/2019-10-08_L1.md)   2️⃣
-- [167. Two Sum II - Input array is sorted](./leetcode/2019-09-25_L167.md)
-- [1002. Find Common Characters](./leetcode/2019-10-06_L1002.md)
+- [167. Two Sum II - Input array is sorted](./leetcode/2019-09-25_L167.md)   2️⃣
+- [1002. Find Common Characters](./leetcode/2019-10-06_L1002.md)  2️⃣
+- [1185. Day of the Week](./leetcode/2019-10-10_L1185.md)
+- [1200. Minimum Absolute Difference](./leetcode/2019-10-06_L1200.md)
+
+## Dynamic Programming
+
+- [718. Maximum Length of Repeated Subarray](./leetcode/2019-10-14_L718.md)
 
 ### String
-
-- [387. First Unique Character in a String](./leetcode/2019-09-26_L387.md)
+  
+- [387. First Unique Character in a String](./leetcode/2019-09-26_L387.md)  2️⃣
 - [443. String Compression](./leetcode/2019-10-06_L443.md)
-- [1189. Maximum Number of Balloons](./leetcode/2019-10-08_L1189.md) 2️⃣
+- [1189. Maximum Number of Balloons](./leetcode/2019-10-08_L1189.md)  2️⃣
 
 ### Hash table
 
+- [454. 4Sum II](./leetcode/2019-10-09_L454.md)
 - [500. Keyboard Row](./leetcode/2019-09-27_L500.md)
 
 ### Linked list
@@ -40,7 +47,7 @@ Divide by tags.
 - [21. Merge Two Sorted Lists](./leetcode/2019-10-04_L21.md)
 - [83. Remove Duplicates from Sorted List](./leetcode/2019-10-01_L83.md)
 - [203. Remove Linked List Elements](./leetcode/2019-09-28_L203.md)
-- [206. Reverse Linked List](./leetcode/2019-09-30_L206.md)
+- [206. Reverse Linked List](./leetcode/2019-09-30_L206.md) 2️⃣
 -  [876. Middle of the Linked List](./leetcode/2019-09-29_L876.md)
 
 ## Stack 
@@ -79,7 +86,11 @@ Divide by tags.
 
 ### Binary Search 
 
-- [704. Binary Search](./leetcode/2019-10-02_L704.md)
+- [378. Kth Smallest Element in a Sorted Matrix](./leetcode/2019-10-15_L378.md)
+- [410. Split Array Largest Sum](./leetcode/2019-10-11_L410.md)
+- [658. Find K Closest Elements](./leetcode/2019-10-10_L658.md)
+- [704. Binary Search](./leetcode/2019-10-02_L704.md) 2️⃣
+- [719. Find K-th Smallest Pair Distance](./leetcode/2019-10-15_L719.md)
 
 ### Divide and Conquer
 
