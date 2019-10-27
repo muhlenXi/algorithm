@@ -81,8 +81,8 @@ Divide by tags.
 
 ### Two Points
 
-- [344. Reverse String](./leetcode/2019-10-02_L344.md)
-- [345. Reverse Vowels of a String](./leetcode/2019-10-02_L345.md)
+- [344. Reverse String](./leetcode/2019-10-02_L344.md)  2️⃣
+- [345. Reverse Vowels of a String](./leetcode/2019-10-02_L345.md)  2️⃣
 
 ### Binary Search 
 
