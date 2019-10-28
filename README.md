@@ -25,7 +25,7 @@ Divide by tags.
 - [167. Two Sum II - Input array is sorted](./leetcode/2019-09-25_L167.md)   2️⃣
 - [1002. Find Common Characters](./leetcode/2019-10-06_L1002.md)  2️⃣
 - [1185. Day of the Week](./leetcode/2019-10-10_L1185.md)
-- [1200. Minimum Absolute Difference](./leetcode/2019-10-06_L1200.md)
+- [1200. Minimum Absolute Difference](./leetcode/2019-10-06_L1200.md)  2️⃣
 
 ## Dynamic Programming
 
