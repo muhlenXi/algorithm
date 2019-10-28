@@ -94,7 +94,7 @@ Divide by tags.
 
 ### Divide and Conquer
 
-- [53. Maximum Subarray](./leetcode/2019-10-04_L53.md)
+- [53. Maximum Subarray](./leetcode/2019-10-04_L53.md)   2️⃣
 - [169. Majority Element](./leetcode/2019-10-03_L169.md)
 
 ### Sort
