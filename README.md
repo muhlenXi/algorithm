@@ -78,6 +78,7 @@ Divide by tags.
 
 - [69. Sqrt(x)](./leetcode/2019-10-02_L69.md)
 - [367. Valid Perfect Square](./leetcode/2019-10-02_L367.md)
+- [372. Super Pow](./leetcode/2019-10-30_L372.md)
 
 ### Two Points
 
