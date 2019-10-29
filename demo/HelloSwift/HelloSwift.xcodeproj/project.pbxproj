@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		C81D6988233CEAEC00D0AD52 /* InsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81D6987233CEAEC00D0AD52 /* InsertionSort.swift */; };
 		C82A9821233E3C2200260B99 /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A9820233E3C2200260B99 /* MergeSort.swift */; };
+		C8389B942367E0570002479D /* CoinChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8389B932367E0570002479D /* CoinChange.swift */; };
 		C8480870234D6029006A81B8 /* DepthFirstSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C848086F234D6029006A81B8 /* DepthFirstSearch.swift */; };
 		C84E061A2353F52400907A2C /* DynamicProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E06192353F52400907A2C /* DynamicProgramming.swift */; };
+		C85311882366D22C00A226C1 /* fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85311872366D22C00A226C1 /* fibonacci.swift */; };
 		C88C1D8B23444081008116FA /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88C1D8A23444081008116FA /* BinarySearch.swift */; };
 		C88C1D8D2346FFA0008116FA /* DivideAndConquer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88C1D8C2346FFA0008116FA /* DivideAndConquer.swift */; };
 		C88C1D8F2347127D008116FA /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88C1D8E2347127D008116FA /* Stack.swift */; };
@@ -43,8 +45,10 @@
 /* Begin PBXFileReference section */
 		C81D6987233CEAEC00D0AD52 /* InsertionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort.swift; sourceTree = "<group>"; };
 		C82A9820233E3C2200260B99 /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
+		C8389B932367E0570002479D /* CoinChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinChange.swift; sourceTree = "<group>"; };
 		C848086F234D6029006A81B8 /* DepthFirstSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthFirstSearch.swift; sourceTree = "<group>"; };
 		C84E06192353F52400907A2C /* DynamicProgramming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicProgramming.swift; sourceTree = "<group>"; };
+		C85311872366D22C00A226C1 /* fibonacci.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fibonacci.swift; sourceTree = "<group>"; };
 		C88C1D8A23444081008116FA /* BinarySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
 		C88C1D8C2346FFA0008116FA /* DivideAndConquer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivideAndConquer.swift; sourceTree = "<group>"; };
 		C88C1D8E2347127D008116FA /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
@@ -94,9 +98,19 @@
 			path = leetcode;
 			sourceTree = "<group>";
 		};
+		C85311892366D23700A226C1 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				C85311872366D22C00A226C1 /* fibonacci.swift */,
+				C8389B932367E0570002479D /* CoinChange.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		C8C34D3D2333AA3000CD5225 = {
 			isa = PBXGroup;
 			children = (
+				C85311892366D23700A226C1 /* Other */,
 				C8C34D482333AA3000CD5225 /* HelloSwift */,
 				C8C34D472333AA3000CD5225 /* Products */,
 			);
@@ -191,12 +205,14 @@
 			files = (
 				C8480870234D6029006A81B8 /* DepthFirstSearch.swift in Sources */,
 				C8C34D642333ACE400CD5225 /* SelectionSort.swift in Sources */,
+				C8389B942367E0570002479D /* CoinChange.swift in Sources */,
 				C88C1D8F2347127D008116FA /* Stack.swift in Sources */,
 				C88FB4622341E85D00A81BA3 /* Array.swift in Sources */,
 				C8E86BFC23442C370037740C /* Math.swift in Sources */,
 				C88C1D8B23444081008116FA /* BinarySearch.swift in Sources */,
 				C8E86BFE2344332E0037740C /* TwoPoints.swift in Sources */,
 				C88C1D93234A35AE008116FA /* Heap.swift in Sources */,
+				C85311882366D22C00A226C1 /* fibonacci.swift in Sources */,
 				C88FB4642341E91E00A81BA3 /* String.swift in Sources */,
 				C88C1D8D2346FFA0008116FA /* DivideAndConquer.swift in Sources */,
 				C82A9821233E3C2200260B99 /* MergeSort.swift in Sources */,
