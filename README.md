@@ -23,6 +23,8 @@ Divide by tags.
 
 - [1. Two Sum](./leetcode/2019-10-08_L1.md)   2️⃣
 - [167. Two Sum II - Input array is sorted](./leetcode/2019-09-25_L167.md)   2️⃣
+- [283. Move Zeroes](./leetcode/2019-12-07_L283.md)
+- [724. Find Pivot Index](./leetcode/2019-12-07_L724.md)
 - [1002. Find Common Characters](./leetcode/2019-10-06_L1002.md)  2️⃣
 - [1185. Day of the Week](./leetcode/2019-10-10_L1185.md)
 - [1200. Minimum Absolute Difference](./leetcode/2019-10-06_L1200.md)  2️⃣
@@ -82,8 +84,10 @@ Divide by tags.
 
 ### Two Points
 
+- [88. Merge Sorted Array](./leetcode/2019-12-07_L88.md)
 - [344. Reverse String](./leetcode/2019-10-02_L344.md)  2️⃣
 - [345. Reverse Vowels of a String](./leetcode/2019-10-02_L345.md)  2️⃣
+- [977. Squares of a Sorted Array](./leetcode/2019-12-07_L977.md)
 
 ### Binary Search 
 
