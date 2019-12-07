@@ -8,19 +8,25 @@
 
 import Foundation
 
+// let nums = [-1,-1,-1,-1,-1, 0]
 
-func qpow(x: Int, n: Int) -> Int {
-    var output = 1
-    var n = n
-    var x = x
-    while n > 0 {
-        if n & 1 == 1 {
-            output *= x
-        }
-        x = x * x
-        n = n >> 1
+let nums = [-1,-1,-1,0,1,1]
+
+func pivotIndex(_ nums: [Int]) -> Int {
+    var right = 0
+    for element in nums {
+        right += element
     }
-    return output
+    
+    var left = 0
+    for index in 0..<nums.count {
+        right -= nums[index]
+        if left == right {
+            return index
+        }
+        left += nums[index]
+    }
+    return -1
 }
 
-print(qpow(x: 5, n: 3))
+print(pivotIndex(nums))
