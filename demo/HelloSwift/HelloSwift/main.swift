@@ -8,25 +8,28 @@
 
 import Foundation
 
-// let nums = [-1,-1,-1,-1,-1, 0]
-
-let nums = [-1,-1,-1,0,1,1]
-
-func pivotIndex(_ nums: [Int]) -> Int {
-    var right = 0
-    for element in nums {
-        right += element
-    }
-    
-    var left = 0
-    for index in 0..<nums.count {
-        right -= nums[index]
-        if left == right {
-            return index
-        }
-        left += nums[index]
-    }
-    return -1
+func fib(_ n: Int) -> Int{
+    var caches = [Int: Int]()
+    return fib(n, &caches)
 }
 
-print(pivotIndex(nums))
+func fib(_ n: Int, _ cache: inout[Int: Int]) -> Int{
+    if let value = cache[n]{
+        return value
+    }
+    
+    if n == 0 || n == 1 {
+        cache[n] = 1
+        return 1
+    }
+    let fibN = fib(n-1, &cache) + fib(n-2, &cache)
+    cache[n] = fibN
+    return fibN
+}
+
+let f5 = fib(5)
+print(f5)
+
+
+
+
