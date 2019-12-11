@@ -9,7 +9,7 @@
 import Foundation
 
 // 28
-func strStr(_ haystack: String, _ needle: String) -> Int {
+func strStr1(_ haystack: String, _ needle: String) -> Int {
     if needle.count == 0 {
         return 0
     }
@@ -61,7 +61,34 @@ func partialMatchTable(_ string: String) -> [Int] {
 }
 
 
-let haystack = "hello", needle = "ll"
+
+func strStr(_ haystack: String, _ needle: String) -> Int {
+    guard haystack.count >= needle.count else {
+        return -1
+    }
+    
+    if haystack.count == 0 && needle.count == 0 {
+        return 0
+    }
+    
+    if needle == "" {
+        return 0
+    }
+    
+    let haystacks = haystack.map { return $0 }
+    let needles = needle.map {return $0 }
+    let distance = haystack.count - needle.count
+    for i in 0...distance {
+        if haystacks[i..<i+needles.count] == needles[0..<needles.count]{
+            return i
+        }
+    }
+    return -1
+}
+
+
+let a = ""
+let b = ""
 let string = "abababca"
-print(partialMatchTable(string))
-print(strStr(haystack, needle))
+// print(partialMatchTable(string))
+print(strStr(a, b))
