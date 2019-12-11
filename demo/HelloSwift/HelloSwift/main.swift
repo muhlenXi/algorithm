@@ -8,25 +8,60 @@
 
 import Foundation
 
-// let nums = [-1,-1,-1,-1,-1, 0]
-
-let nums = [-1,-1,-1,0,1,1]
-
-func pivotIndex(_ nums: [Int]) -> Int {
-    var right = 0
-    for element in nums {
-        right += element
+// 28
+func strStr(_ haystack: String, _ needle: String) -> Int {
+    if needle.count == 0 {
+        return 0
     }
     
-    var left = 0
-    for index in 0..<nums.count {
-        right -= nums[index]
-        if left == right {
-            return index
+    let haystackArray = haystack.map { return $0 }
+    let needleArray = needle.map {return $0 }
+    let table = partialMatchTable(needle)
+    
+    var i = 0
+    var j = 0
+    while i < haystackArray.count {
+        while j < needleArray.count && i < haystackArray.count {
+            if needleArray[j] == haystackArray[i] {
+                j += 1
+                i += 1
+            } else {
+                i = i + j + 1 - table[j]
+                j = table[j]
+            }
         }
-        left += nums[index]
+        if j == needleArray.count {
+            return i - j
+        }
     }
+    
     return -1
 }
 
-print(pivotIndex(nums))
+func partialMatchTable(_ string: String) -> [Int] {
+    guard string.count > 0 else {
+        return []
+    }
+    
+    let characters = string.map { return $0 }
+    var array = Array(repeating: 0, count: characters.count)
+    
+    for index in 0..<characters.count {
+        var max = index
+        while max > 0 {
+            if characters[0..<max] == characters[index-max+1...index] {
+                array[index] = max
+                break
+            }
+            max -= 1
+        }
+    }
+    
+    return array
+}
+
+
+let haystack = "hello", needle = "ll"
+let string = "abababca"
+print(partialMatchTable(string))
+print(strStr(haystack, needle))
