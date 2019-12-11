@@ -24,6 +24,7 @@ Divide by tags.
 - [1. Two Sum](./leetcode/2019-10-08_L1.md)   2️⃣
 - [167. Two Sum II - Input array is sorted](./leetcode/2019-09-25_L167.md)   2️⃣
 - [283. Move Zeroes](./leetcode/2019-12-07_L283.md)
+- [509. Fibonacci Number](./leetcode/2019-12-11_L509.md)
 - [724. Find Pivot Index](./leetcode/2019-12-07_L724.md)
 - [1002. Find Common Characters](./leetcode/2019-10-06_L1002.md)  2️⃣
 - [1185. Day of the Week](./leetcode/2019-10-10_L1185.md)
@@ -35,6 +36,8 @@ Divide by tags.
 
 ### String
   
+- [14. Longest Common Prefix](./leetcode/2019-12-11_L14.md)
+- [28. Implement strStr()](./leetcode/2019-12-11_L28.md)
 - [387. First Unique Character in a String](./leetcode/2019-09-26_L387.md)  2️⃣
 - [443. String Compression](./leetcode/2019-10-06_L443.md)
 - [1189. Maximum Number of Balloons](./leetcode/2019-10-08_L1189.md)  2️⃣
