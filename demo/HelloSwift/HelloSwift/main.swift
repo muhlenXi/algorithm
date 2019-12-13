@@ -9,34 +9,69 @@
 import Foundation
 
 // 28
-func strStr1(_ haystack: String, _ needle: String) -> Int {
-    if needle.count == 0 {
+func strStr(_ haystack: String, _ needle: String) -> Int {
+   return kmp(text: haystack, pattern: needle)
+}
+
+func bruteForceSearch(text: String, pattern: String) -> Int {
+    if pattern.count == 0 {
+        return 0
+    }
+    if text.count < pattern.count {
+        return -1
+    }
+    
+    let texts = text.map { return $0 }
+    let patterns = pattern.map { return $0 }
+    
+    var j = 0
+    for i in 0..<text.count-pattern.count {
+        while j < patterns.count {
+            if texts[i+j] == patterns[j] {
+                j += 1
+            } else {
+                j = 0
+                break
+            }
+            if j == patterns.count {
+                return i
+            }
+        }
+    }
+    
+    return -1
+}
+
+func kmp(text: String, pattern: String) -> Int {
+    if pattern.count == 0 {
         return 0
     }
     
-    let haystackArray = haystack.map { return $0 }
-    let needleArray = needle.map {return $0 }
-    let table = partialMatchTable(needle)
+    let texts = text.map { return $0 }
+    let patterns = pattern.map { return $0 }
+    let table = partialMatchTable(pattern)
     
     var i = 0
     var j = 0
-    while i < haystackArray.count {
-        while j < needleArray.count && i < haystackArray.count {
-            if needleArray[j] == haystackArray[i] {
-                j += 1
+    while i < text.count && j < patterns.count {
+        if texts[i] == patterns[j] {
+            j += 1
+            i += 1
+        } else {
+            if j == 0 {
                 i += 1
             } else {
-                i = i + j + 1 - table[j]
-                j = table[j]
+               j = table[j-1]
             }
         }
-        if j == needleArray.count {
+        if j == patterns.count {
             return i - j
         }
     }
     
     return -1
 }
+
 
 func partialMatchTable(_ string: String) -> [Int] {
     guard string.count > 0 else {
@@ -56,39 +91,16 @@ func partialMatchTable(_ string: String) -> [Int] {
             max -= 1
         }
     }
-    
+
     return array
 }
 
 
-
-func strStr(_ haystack: String, _ needle: String) -> Int {
-    guard haystack.count >= needle.count else {
-        return -1
-    }
-    
-    if haystack.count == 0 && needle.count == 0 {
-        return 0
-    }
-    
-    if needle == "" {
-        return 0
-    }
-    
-    let haystacks = haystack.map { return $0 }
-    let needles = needle.map {return $0 }
-    let distance = haystack.count - needle.count
-    for i in 0...distance {
-        if haystacks[i..<i+needles.count] == needles[0..<needles.count]{
-            return i
-        }
-    }
-    return -1
-}
+let a = "aaaaa"
+let b = "abcaabc"
 
 
-let a = ""
-let b = ""
-let string = "abababca"
-// print(partialMatchTable(string))
+print(partialMatchTable(b))
 print(strStr(a, b))
+print(bruteForceSearch(text: a, pattern: b))
+print(kmp(text: a, pattern: b))
