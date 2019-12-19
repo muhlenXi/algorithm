@@ -38,6 +38,7 @@ Divide by tags.
   
 - [14. Longest Common Prefix](./leetcode/2019-12-11_L14.md)
 - [28. Implement strStr()](./leetcode/2019-12-11_L28.md)
+- [38. Count and Say](./leetcode/2019-12-19_L38.md)
 - [387. First Unique Character in a String](./leetcode/2019-09-26_L387.md)  2️⃣
 - [443. String Compression](./leetcode/2019-10-06_L443.md)
 - [1189. Maximum Number of Balloons](./leetcode/2019-10-08_L1189.md)  2️⃣
