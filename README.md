@@ -22,6 +22,9 @@ Divide by tags.
 ### Array
 
 - [1. Two Sum](./leetcode/2019-10-08_L1.md)   2️⃣
+- [66. Plus One](./leetcode/2019-12-20_L66.md)
+- [118. Pascal's Triangle](./leetcode/2019-12-20_L118.md)
+- [119. Pascal's Triangle II](./leetcode/2019-12-20_L119.md)
 - [167. Two Sum II - Input array is sorted](./leetcode/2019-09-25_L167.md)   2️⃣
 - [283. Move Zeroes](./leetcode/2019-12-07_L283.md)
 - [509. Fibonacci Number](./leetcode/2019-12-11_L509.md)
@@ -39,6 +42,8 @@ Divide by tags.
 - [14. Longest Common Prefix](./leetcode/2019-12-11_L14.md)
 - [28. Implement strStr()](./leetcode/2019-12-11_L28.md)
 - [38. Count and Say](./leetcode/2019-12-19_L38.md)
+- [58. Length of Last Word](./leetcode/2019-12-20_L58.md)
+- [67. Add Binary](./leetcode/2019-12-20_L67.md)
 - [387. First Unique Character in a String](./leetcode/2019-09-26_L387.md)  2️⃣
 - [443. String Compression](./leetcode/2019-10-06_L443.md)
 - [1189. Maximum Number of Balloons](./leetcode/2019-10-08_L1189.md)  2️⃣
@@ -83,12 +88,15 @@ Divide by tags.
 ### Math
 
 - [69. Sqrt(x)](./leetcode/2019-10-02_L69.md)
+- [168. Excel Sheet Column Title](./leetcode/2019-12-22_L168.md)
+- [171. Excel Sheet Column Number](./leetcode/2019-12-22_L171.md)
 - [367. Valid Perfect Square](./leetcode/2019-10-02_L367.md)
 - [372. Super Pow](./leetcode/2019-10-30_L372.md)
 
 ### Two Points
 
 - [88. Merge Sorted Array](./leetcode/2019-12-07_L88.md)
+- [125. Valid Palindrome](./leetcode/2019-12-22_L125.md)
 - [344. Reverse String](./leetcode/2019-10-02_L344.md)  2️⃣
 - [345. Reverse Vowels of a String](./leetcode/2019-10-02_L345.md)  2️⃣
 - [977. Squares of a Sorted Array](./leetcode/2019-12-07_L977.md)
@@ -111,3 +119,11 @@ Divide by tags.
 - [242. Valid Anagram](./leetcode/2019-10-05_L242.md)
 - [349.  Intersection of Two Arrays](./leetcode/2019-10-05_L349.md)
 - [350. Intersection of Two Arrays II](./leetcode/2019-10-06_L350.md)
+
+### Minimax
+
+- [292. Nim Game](./leetcode/2019-12-20_L292.md)
+
+### Bit Manipulation
+
+- [136. Single Number](./leetcode/2019-12-22_L136.md)
