@@ -15,115 +15,115 @@
 |9、[桶排序](./solutions/bucketSort.md)|||
 |10、[基数排序](./solutions/radixSort.md)|||
 
-## Leetcode list
+## lc list
 
 Divide by tags.
 
 ### Array
 
-- [1. Two Sum](./leetcode/2019-10-08_L1.md)   2️⃣
-- [66. Plus One](./leetcode/2019-12-20_L66.md)
-- [118. Pascal's Triangle](./leetcode/2019-12-20_L118.md)
-- [119. Pascal's Triangle II](./leetcode/2019-12-20_L119.md)
-- [167. Two Sum II - Input array is sorted](./leetcode/2019-09-25_L167.md)   2️⃣
-- [283. Move Zeroes](./leetcode/2019-12-07_L283.md)
-- [509. Fibonacci Number](./leetcode/2019-12-11_L509.md)
-- [724. Find Pivot Index](./leetcode/2019-12-07_L724.md)
-- [1002. Find Common Characters](./leetcode/2019-10-06_L1002.md)  2️⃣
-- [1185. Day of the Week](./leetcode/2019-10-10_L1185.md)
-- [1200. Minimum Absolute Difference](./leetcode/2019-10-06_L1200.md)  2️⃣
+- [1. Two Sum](./lc/2019-10-08_L1.md)   2️⃣
+- [66. Plus One](./lc/2019-12-20_L66.md)
+- [118. Pascal's Triangle](./lc/2019-12-20_L118.md)
+- [119. Pascal's Triangle II](./lc/2019-12-20_L119.md)
+- [167. Two Sum II - Input array is sorted](./lc/2019-09-25_L167.md)   2️⃣
+- [283. Move Zeroes](./lc/2019-12-07_L283.md)
+- [509. Fibonacci Number](./lc/2019-12-11_L509.md)
+- [724. Find Pivot Index](./lc/2019-12-07_L724.md)
+- [1002. Find Common Characters](./lc/2019-10-06_L1002.md)  2️⃣
+- [1185. Day of the Week](./lc/2019-10-10_L1185.md)
+- [1200. Minimum Absolute Difference](./lc/2019-10-06_L1200.md)  2️⃣
 
 ## Dynamic Programming
 
-- [718. Maximum Length of Repeated Subarray](./leetcode/2019-10-14_L718.md)
+- [718. Maximum Length of Repeated Subarray](./lc/2019-10-14_L718.md)
 
 ### String
   
-- [14. Longest Common Prefix](./leetcode/2019-12-11_L14.md)
-- [28. Implement strStr()](./leetcode/2019-12-11_L28.md)
-- [38. Count and Say](./leetcode/2019-12-19_L38.md)
-- [58. Length of Last Word](./leetcode/2019-12-20_L58.md)
-- [67. Add Binary](./leetcode/2019-12-20_L67.md)
-- [387. First Unique Character in a String](./leetcode/2019-09-26_L387.md)  2️⃣
-- [443. String Compression](./leetcode/2019-10-06_L443.md)
-- [1189. Maximum Number of Balloons](./leetcode/2019-10-08_L1189.md)  2️⃣
+- [14. Longest Common Prefix](./lc/2019-12-11_L14.md)
+- [28. Implement strStr()](./lc/2019-12-11_L28.md)
+- [38. Count and Say](./lc/2019-12-19_L38.md)
+- [58. Length of Last Word](./lc/2019-12-20_L58.md)
+- [67. Add Binary](./lc/2019-12-20_L67.md)
+- [387. First Unique Character in a String](./lc/2019-09-26_L387.md)  2️⃣
+- [443. String Compression](./lc/2019-10-06_L443.md)
+- [1189. Maximum Number of Balloons](./lc/2019-10-08_L1189.md)  2️⃣
 
 ### Hash table
 
-- [454. 4Sum II](./leetcode/2019-10-09_L454.md)
-- [500. Keyboard Row](./leetcode/2019-09-27_L500.md)
+- [454. 4Sum II](./lc/2019-10-09_L454.md)
+- [500. Keyboard Row](./lc/2019-09-27_L500.md)
 
 ### Linked list
 
-- [21. Merge Two Sorted Lists](./leetcode/2019-10-04_L21.md)
-- [83. Remove Duplicates from Sorted List](./leetcode/2019-10-01_L83.md)
-- [203. Remove Linked List Elements](./leetcode/2019-09-28_L203.md)
-- [206. Reverse Linked List](./leetcode/2019-09-30_L206.md) 2️⃣
--  [876. Middle of the Linked List](./leetcode/2019-09-29_L876.md)
+- [21. Merge Two Sorted Lists](./lc/2019-10-04_L21.md)
+- [83. Remove Duplicates from Sorted List](./lc/2019-10-01_L83.md)
+- [203. Remove Linked List Elements](./lc/2019-09-28_L203.md)
+- [206. Reverse Linked List](./lc/2019-09-30_L206.md) 2️⃣
+-  [876. Middle of the Linked List](./lc/2019-09-29_L876.md)
 
 ## Stack 
 
-- [20. Valid Parentheses](./leetcode/2019-10-05_L20.md)
-- [155. Min Stack](./leetcode/2019-10-03_L155.md)
-- [844. Backspace String Compare](./leetcode/2019-10-04_L844.md)
-- [1047. Remove All Adjacent Duplicates In String](./leetcode/2019-10-04_L1047.md)
+- [20. Valid Parentheses](./lc/2019-10-05_L20.md)
+- [155. Min Stack](./lc/2019-10-03_L155.md)
+- [844. Backspace String Compare](./lc/2019-10-04_L844.md)
+- [1047. Remove All Adjacent Duplicates In String](./lc/2019-10-04_L1047.md)
 
 ## Heap
 
-- [703. Kth Largest Element in a Stream](./leetcode/2019-10-06_L703.md)
+- [703. Kth Largest Element in a Stream](./lc/2019-10-06_L703.md)
 
 ## Tree
 
-- [100. Same Tree](./leetcode/2019-10-07_L100.md)
-- [404. Sum of Left Leaves](./leetcode/2019-10-07_L404.md)
-- [501. Find Mode in Binary Search Tree](./leetcode/2019-10-07_L501.md)
-- [671. Second Minimum Node In a Binary Tree](./leetcode/2019-10-07_L671.md)
-- [965. Univalued Binary Tree](./leetcode/2019-10-06_L965.md)
+- [100. Same Tree](./lc/2019-10-07_L100.md)
+- [404. Sum of Left Leaves](./lc/2019-10-07_L404.md)
+- [501. Find Mode in Binary Search Tree](./lc/2019-10-07_L501.md)
+- [671. Second Minimum Node In a Binary Tree](./lc/2019-10-07_L671.md)
+- [965. Univalued Binary Tree](./lc/2019-10-06_L965.md)
 
 ## Depth First Search
 
-- [104. Maximum Depth of Binary Tree](./leetcode/2019-10-09_L104.md)
-- [111. Minimum Depth of Binary Tree](./leetcode/2019-10-09_L111.md)
+- [104. Maximum Depth of Binary Tree](./lc/2019-10-09_L104.md)
+- [111. Minimum Depth of Binary Tree](./lc/2019-10-09_L111.md)
 
 ### Math
 
-- [69. Sqrt(x)](./leetcode/2019-10-02_L69.md)
-- [168. Excel Sheet Column Title](./leetcode/2019-12-22_L168.md)
-- [171. Excel Sheet Column Number](./leetcode/2019-12-22_L171.md)
-- [367. Valid Perfect Square](./leetcode/2019-10-02_L367.md)
-- [372. Super Pow](./leetcode/2019-10-30_L372.md)
+- [69. Sqrt(x)](./lc/2019-10-02_L69.md)
+- [168. Excel Sheet Column Title](./lc/2019-12-22_L168.md)
+- [171. Excel Sheet Column Number](./lc/2019-12-22_L171.md)
+- [367. Valid Perfect Square](./lc/2019-10-02_L367.md)
+- [372. Super Pow](./lc/2019-10-30_L372.md)
 
 ### Two Points
 
-- [88. Merge Sorted Array](./leetcode/2019-12-07_L88.md)
-- [125. Valid Palindrome](./leetcode/2019-12-22_L125.md)
-- [344. Reverse String](./leetcode/2019-10-02_L344.md)  2️⃣
-- [345. Reverse Vowels of a String](./leetcode/2019-10-02_L345.md)  2️⃣
-- [977. Squares of a Sorted Array](./leetcode/2019-12-07_L977.md)
+- [88. Merge Sorted Array](./lc/2019-12-07_L88.md)
+- [125. Valid Palindrome](./lc/2019-12-22_L125.md)
+- [344. Reverse String](./lc/2019-10-02_L344.md)  2️⃣
+- [345. Reverse Vowels of a String](./lc/2019-10-02_L345.md)  2️⃣
+- [977. Squares of a Sorted Array](./lc/2019-12-07_L977.md)
 
 ### Binary Search 
 
-- [378. Kth Smallest Element in a Sorted Matrix](./leetcode/2019-10-15_L378.md)
-- [410. Split Array Largest Sum](./leetcode/2019-10-11_L410.md)
-- [658. Find K Closest Elements](./leetcode/2019-10-10_L658.md)
-- [704. Binary Search](./leetcode/2019-10-02_L704.md) 2️⃣
-- [719. Find K-th Smallest Pair Distance](./leetcode/2019-10-15_L719.md)
+- [378. Kth Smallest Element in a Sorted Matrix](./lc/2019-10-15_L378.md)
+- [410. Split Array Largest Sum](./lc/2019-10-11_L410.md)
+- [658. Find K Closest Elements](./lc/2019-10-10_L658.md)
+- [704. Binary Search](./lc/2019-10-02_L704.md) 2️⃣
+- [719. Find K-th Smallest Pair Distance](./lc/2019-10-15_L719.md)
 
 ### Divide and Conquer
 
-- [53. Maximum Subarray](./leetcode/2019-10-04_L53.md)   2️⃣
-- [169. Majority Element](./leetcode/2019-10-03_L169.md)   2️⃣
+- [53. Maximum Subarray](./lc/2019-10-04_L53.md)   2️⃣
+- [169. Majority Element](./lc/2019-10-03_L169.md)   2️⃣
 
 ### Sort
 
-- [242. Valid Anagram](./leetcode/2019-10-05_L242.md)
-- [349.  Intersection of Two Arrays](./leetcode/2019-10-05_L349.md)
-- [350. Intersection of Two Arrays II](./leetcode/2019-10-06_L350.md)
+- [242. Valid Anagram](./lc/2019-10-05_L242.md)
+- [349.  Intersection of Two Arrays](./lc/2019-10-05_L349.md)
+- [350. Intersection of Two Arrays II](./lc/2019-10-06_L350.md)
 
 ### Minimax
 
-- [292. Nim Game](./leetcode/2019-12-20_L292.md)
+- [292. Nim Game](./lc/2019-12-20_L292.md)
 
 ### Bit Manipulation
 
-- [136. Single Number](./leetcode/2019-12-22_L136.md)
+- [136. Single Number](./lc/2019-12-22_L136.md)
