@@ -15,7 +15,7 @@
 |9、[桶排序](./solutions/bucketSort.md)|||
 |10、[基数排序](./solutions/radixSort.md)|||
 
-## lc list
+## Leetcode list
 
 Divide by tags.
 
@@ -26,6 +26,7 @@ Divide by tags.
 - [118. Pascal's Triangle](./lc/2019-12-20_L118.md)
 - [119. Pascal's Triangle II](./lc/2019-12-20_L119.md)
 - [167. Two Sum II - Input array is sorted](./lc/2019-09-25_L167.md)   2️⃣
+- [189. Rotate Array](./lc/2019-12-23_L189.md)
 - [283. Move Zeroes](./lc/2019-12-07_L283.md)
 - [509. Fibonacci Number](./lc/2019-12-11_L509.md)
 - [724. Find Pivot Index](./lc/2019-12-07_L724.md)
@@ -50,6 +51,8 @@ Divide by tags.
 
 ### Hash table
 
+- [217. Contains Duplicate](./lc/2019-12-23_L217.md)
+- [219. Contains Duplicate II](./lc/2019-12-23_L219.md)
 - [454. 4Sum II](./lc/2019-10-09_L454.md)
 - [500. Keyboard Row](./lc/2019-09-27_L500.md)
 
@@ -65,6 +68,8 @@ Divide by tags.
 
 - [20. Valid Parentheses](./lc/2019-10-05_L20.md)
 - [155. Min Stack](./lc/2019-10-03_L155.md)
+- [225. Implement Stack using Queues](./lc/2019-12-23_L225.md)
+- [232. Implement Queue using Stacks](./lc/2019-12-23_L232.md)
 - [844. Backspace String Compare](./lc/2019-10-04_L844.md)
 - [1047. Remove All Adjacent Duplicates In String](./lc/2019-10-04_L1047.md)
 
@@ -90,6 +95,8 @@ Divide by tags.
 - [69. Sqrt(x)](./lc/2019-10-02_L69.md)
 - [168. Excel Sheet Column Title](./lc/2019-12-22_L168.md)
 - [171. Excel Sheet Column Number](./lc/2019-12-22_L171.md)
+- [172. Factorial Trailing Zeroes](./lc/2019-12-23_L172.md)
+- [231. Power of Two](./lc/2019-12-23_L231.md)
 - [367. Valid Perfect Square](./lc/2019-10-02_L367.md)
 - [372. Super Pow](./lc/2019-10-30_L372.md)
 
