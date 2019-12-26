@@ -45,8 +45,12 @@ Divide by tags.
 - [38. Count and Say](./lc/2019-12-19_L38.md)
 - [58. Length of Last Word](./lc/2019-12-20_L58.md)
 - [67. Add Binary](./lc/2019-12-20_L67.md)
+- [344. Reverse String](./lc/2019-10-02_L344.md)  2️⃣
 - [387. First Unique Character in a String](./lc/2019-09-26_L387.md)  2️⃣
+- [415. Add Strings](./lc/2019-12-24_L415.md)
 - [443. String Compression](./lc/2019-10-06_L443.md)
+- [520. Detect Capital](./lc/2019-12-24_L520.md)
+- [541. Reverse String II](./lc/2019-12-24_L541.md)
 - [1189. Maximum Number of Balloons](./lc/2019-10-08_L1189.md)  2️⃣
 
 ### Hash table
@@ -97,6 +101,8 @@ Divide by tags.
 - [171. Excel Sheet Column Number](./lc/2019-12-22_L171.md)
 - [172. Factorial Trailing Zeroes](./lc/2019-12-23_L172.md)
 - [231. Power of Two](./lc/2019-12-23_L231.md)
+- [258. Add Digits](./lc/2019-12-24_L258.md)
+- [268. Missing Number](./lc/2019-12-24_L268.md)
 - [367. Valid Perfect Square](./lc/2019-10-02_L367.md)
 - [372. Super Pow](./lc/2019-10-30_L372.md)
 
@@ -104,7 +110,6 @@ Divide by tags.
 
 - [88. Merge Sorted Array](./lc/2019-12-07_L88.md)
 - [125. Valid Palindrome](./lc/2019-12-22_L125.md)
-- [344. Reverse String](./lc/2019-10-02_L344.md)  2️⃣
 - [345. Reverse Vowels of a String](./lc/2019-10-02_L345.md)  2️⃣
 - [977. Squares of a Sorted Array](./lc/2019-12-07_L977.md)
 
@@ -134,3 +139,5 @@ Divide by tags.
 ### Bit Manipulation
 
 - [136. Single Number](./lc/2019-12-22_L136.md)
+- [342. Power of Four](./lc/2019-12-24_L342.md)
+- [389. Find the Difference](./lc/2019-12-24_L389.md)
