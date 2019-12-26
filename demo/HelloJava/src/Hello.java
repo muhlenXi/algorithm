@@ -1,23 +1,28 @@
 public class Hello {
     public void test() {
-        Solution solution = new Solution();
-        ListNode node1 = new ListNode(1);
-        ListNode node2 = new ListNode(2);
-        ListNode node3 = new ListNode(3);
+        int n = 10;
+        int o = firstBadVersion(n);
+        System.out.println(o);
+    }
 
-        node1.next = node2;
-        node2.next = node3;
+    boolean isBadVersion(int version) {
+        return  version >= 5;
+    }
 
-        node1.print();
+    public int firstBadVersion(int n) {
+        int low = 0;
+        int high = n;
+        int mid = low + (high-low)/2;
 
-        solution.deleteNode(node2);
+        while (low < high) {
+            mid = low + (high-low)/2;
+            if (isBadVersion(mid)) {
+                high = mid;
+            } else {
+                low = mid + 1;
+            }
+        }
+        return low;
     }
 }
 
-
-class Solution {
-    public void deleteNode(ListNode node) {
-        node.val = node.next.val;
-        node.next = node.next.next;
-    }
-}
