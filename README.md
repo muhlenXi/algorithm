@@ -17,7 +17,7 @@
 
 ## Leetcode list
 
-Divide by tags.
+Divide by tags.  L1287
 
 ### Array
 
@@ -31,8 +31,10 @@ Divide by tags.
 - [509. Fibonacci Number](./lc/2019-12-11_L509.md)
 - [724. Find Pivot Index](./lc/2019-12-07_L724.md)
 - [1002. Find Common Characters](./lc/2019-10-06_L1002.md)  2️⃣
+- [1089. Duplicate Zeros](./lc/2019-12-25_L1089.md)
 - [1185. Day of the Week](./lc/2019-10-10_L1185.md)
 - [1200. Minimum Absolute Difference](./lc/2019-10-06_L1200.md)  2️⃣
+- [1287. Element Appearing More Than 25% In Sorted Array](./lc/2019-12-25_L1287.md)
 
 ## Dynamic Programming
 
@@ -51,6 +53,7 @@ Divide by tags.
 - [443. String Compression](./lc/2019-10-06_L443.md)
 - [520. Detect Capital](./lc/2019-12-24_L520.md)
 - [541. Reverse String II](./lc/2019-12-24_L541.md)
+- [557. Reverse Words in a String III](./lc/2019-12-24_L557.md)
 - [1189. Maximum Number of Balloons](./lc/2019-10-08_L1189.md)  2️⃣
 
 ### Hash table
