@@ -1,28 +1,55 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+
 public class Hello {
     public void test() {
-        int n = 10;
-        int o = firstBadVersion(n);
-        System.out.println(o);
+        Node n1 = new Node(1);
+        Node n2 = new Node(2);
+        Node n3 = new Node(3);
+        Node n4 = new Node(4);
+        Node n5 = new Node(5);
+        Node n6 = new Node(6);
+
+        n3.children = Arrays.asList(n5, n6);
+        n1.children = Arrays.asList(n3, n2, n4);
+
+        System.out.println(n3.children);
+        //System.out.println(preorder(n1));
     }
 
-    boolean isBadVersion(int version) {
-        return  version >= 5;
-    }
 
-    public int firstBadVersion(int n) {
-        int low = 0;
-        int high = n;
-        int mid = low + (high-low)/2;
+    public List<Integer> preorder(Node root) {
+        List<Integer> list = new ArrayList<Integer>();
+        list.add(root.val);
 
-        while (low < high) {
-            mid = low + (high-low)/2;
-            if (isBadVersion(mid)) {
-                high = mid;
-            } else {
-                low = mid + 1;
-            }
+        if (root.children == null) {
+            return list;
         }
-        return low;
+        for (int i = 0; i < root.children.size(); i++) {
+            list.addAll(list.size()-1, preorder(root.children.get(i)));
+        }
+
+        return  list;
     }
 }
+
+
+class Node {
+    public int val;
+    public List<Node> children;
+
+    public Node() {}
+
+    public Node(int _val) {
+        val = _val;
+    }
+
+    public Node(int _val, List<Node> _children) {
+        val = _val;
+        children = _children;
+    }
+};
+
 

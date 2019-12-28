@@ -52,85 +52,24 @@ func openDetailSceneByURL(_ url: URL?) {
 let scheme = URL(string:"tulong.fazzaco://getCompanyDetailA?languageType=0&userId=778&traderId=106")!
 let h5 = URL(string:"https://www.fazzaco.com/h5/getCompanyDetailA?languageType=0&userId=778&traderId=106&from=singlemessage&isappinstalled=0&scene=1&clicktime=1577426014&enterid=1577426014")!
 
-//print(scheme.query)
-//print(scheme.host)
-//
-//print(h5.query)
-//print(h5.host)
-
 openDetailSceneByURL(scheme)
 openDetailSceneByURL(h5)
 
-
-
-func romanToInt(_ s: String) -> Int {
-    let I = Character("I")
-    let V = Character("V")
-    let X = Character("X")
-    let L = Character("L")
-    let C = Character("C")
-    let D = Character("D")
-    let M = Character("M")
-    
-    let keys = [I, V, X, L, C, D, M]
-    let values = [1, 5, 10, 50, 100, 500, 1000]
-    var tables = [Character: Int]()
-    for index in 0..<keys.count {
-        tables[keys[index]] = values[index]
-    }
-    
+func checkRecord(_ s: String) -> Bool {
     let ss = s.map { return $0 }
-    var sum = 0
-    var index = 0
-    while index < ss.count {
-        switch ss[index] {
-        case I:
-            if index+1 < ss.count && ss[index+1] == V {
-                sum = sum + tables[ss[index + 1]]! - tables[ss[index]]!
-                index += 2
-                continue
-            }
-            if index+1 < ss.count && ss[index+1] == X {
-                sum = sum + tables[ss[index + 1]]! - tables[ss[index]]!
-                index += 2
-                continue
-            }
-            sum += tables[ss[index]]!
-        case X:
-            if index+1 < ss.count && ss[index+1] == L {
-                sum = sum + tables[ss[index + 1]]! - tables[ss[index]]!
-                index += 2
-                continue
-            }
-            if index+1 < ss.count && ss[index+1] == C {
-                sum = sum + tables[ss[index + 1]]! - tables[ss[index]]!
-                index += 2
-                continue
-            }
-            sum += tables[ss[index]]!
-        case C:
-            if index+1 < ss.count && ss[index+1] == D {
-                sum = sum + tables[ss[index + 1]]! - tables[ss[index]]!
-                index += 2
-                continue
-            }
-            if index+1 < ss.count && ss[index+1] == M {
-                sum = sum + tables[ss[index + 1]]! - tables[ss[index]]!
-                index += 2
-                continue
-            }
-            sum += tables[ss[index]]!
-        default:
-            sum += tables[ss[index]]!
-        }
-        index += 1
+    if ss.filter({ $0 == Character("A")}).count >= 2 {
+        return false
+    }
+    if s.contains("LLL") {
+        return false
     }
     
-    return sum
+    return true
 }
 
-/// III 3 IV 4 IX 9 LVIII 58 MCMXCIV 1994
-print(romanToInt(s: "MCMXCIV"))
+let a = "PPALLP"
+print(checkRecord(a))
+
 
 
 
