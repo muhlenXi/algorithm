@@ -62,50 +62,77 @@ openDetailSceneByURL(scheme)
 openDetailSceneByURL(h5)
 
 
-let t1 = TreeNode(1)
-let t2 = TreeNode(2)
-let t3 = TreeNode(3)
 
-let t4 = TreeNode(4)
-let t5 = TreeNode(5)
-
-let t6 = TreeNode(6)
-let t7 = TreeNode(7)
-t1.left = t2
-t1.right = t3
-
-t2.left = t4
-t2.right = t5
-
-t3.left = t6
-t3.right = t7
-
-
-func licenseKeyFormatting(_ S: String, _ K: Int) -> String {
-    guard K != 0 else {
-        return ""
+func romanToInt(_ s: String) -> Int {
+    let I = Character("I")
+    let V = Character("V")
+    let X = Character("X")
+    let L = Character("L")
+    let C = Character("C")
+    let D = Character("D")
+    let M = Character("M")
+    
+    let keys = [I, V, X, L, C, D, M]
+    let values = [1, 5, 10, 50, 100, 500, 1000]
+    var tables = [Character: Int]()
+    for index in 0..<keys.count {
+        tables[keys[index]] = values[index]
     }
     
-    let characters = S
-        .uppercased()
-        .map { return $0 }
-        .filter { $0 != Character("-") }
-    var outputs = [String]()
-    
-    var index = characters.count-1
-    while index >= 0 {
-        let low = max(0, index-K+1)
-        outputs.insert(String(characters[low...index]), at: 0)
-        index -= K
+    let ss = s.map { return $0 }
+    var sum = 0
+    var index = 0
+    while index < ss.count {
+        switch ss[index] {
+        case I:
+            if index+1 < ss.count && ss[index+1] == V {
+                sum = sum + tables[ss[index + 1]]! - tables[ss[index]]!
+                index += 2
+                continue
+            }
+            if index+1 < ss.count && ss[index+1] == X {
+                sum = sum + tables[ss[index + 1]]! - tables[ss[index]]!
+                index += 2
+                continue
+            }
+            sum += tables[ss[index]]!
+        case X:
+            if index+1 < ss.count && ss[index+1] == L {
+                sum = sum + tables[ss[index + 1]]! - tables[ss[index]]!
+                index += 2
+                continue
+            }
+            if index+1 < ss.count && ss[index+1] == C {
+                sum = sum + tables[ss[index + 1]]! - tables[ss[index]]!
+                index += 2
+                continue
+            }
+            sum += tables[ss[index]]!
+        case C:
+            if index+1 < ss.count && ss[index+1] == D {
+                sum = sum + tables[ss[index + 1]]! - tables[ss[index]]!
+                index += 2
+                continue
+            }
+            if index+1 < ss.count && ss[index+1] == M {
+                sum = sum + tables[ss[index + 1]]! - tables[ss[index]]!
+                index += 2
+                continue
+            }
+            sum += tables[ss[index]]!
+        default:
+            sum += tables[ss[index]]!
+        }
+        index += 1
     }
     
-    return outputs.joined(separator: "-")
+    return sum
 }
 
+/// III 3 IV 4 IX 9 LVIII 58 MCMXCIV 1994
+print(romanToInt(s: "MCMXCIV"))
 
-let s = "5f3z-2e-9-w"
-let k = 0
-print(licenseKeyFormatting(s, k))
+
 
 
 
