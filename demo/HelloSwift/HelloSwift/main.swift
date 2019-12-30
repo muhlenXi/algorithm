@@ -55,39 +55,22 @@ let h5 = URL(string:"https://www.fazzaco.com/h5/getCompanyDetailA?languageType=0
 openDetailSceneByURL(scheme)
 openDetailSceneByURL(h5)
 
-func canConstruct(_ ransomNote: String, _ magazine: String) -> Bool {
-    guard ransomNote.count <= magazine.count else {
-        return false
-    }
+// 82
+func deleteDuplicates(_ head: ListNode?) -> ListNode? {
     
-    var rcs = ransomNote.utf8CString
-    rcs.removeLast()
-    var mcs = magazine.utf8CString
-    mcs.removeLast()
-    
-    let offset = 97
-    var table = Array(repeating: 0, count: 26)
-    for element in mcs {
-        table[Int(element)-offset] += 1
-    }
-    
-    for element in rcs {
-        table[Int(element)-offset] -= 1
-        if table[Int(element)-offset] < 0 {
-            return false
-        }
-    }
-    
-    return true
 }
 
+let node2 = ListNode(1)
+let node4 = ListNode(2)
+let node3 = ListNode(2)
+let node5 = ListNode(4)
 
+node2.next = node4
+node4.next = node3
+node3.next = node5
 
-
-
-
-
-
+let h = deleteDuplicates(node2)
+printList(h)
 
 
 
