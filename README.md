@@ -30,11 +30,16 @@ Divide by tags.  L1287
 - [283. Move Zeroes](./lc/2019-12-07_L283.md)
 - [509. Fibonacci Number](./lc/2019-12-11_L509.md)
 - [724. Find Pivot Index](./lc/2019-12-07_L724.md)
+- [905. Sort Array By Parity](./lc/2019-12-25_L905.md)
+- [922. Sort Array By Parity II](./lc/2019-12-25_L922.md)
+- [941. Valid Mountain Array](./lc/2019-12-25_L941.md)
 - [1002. Find Common Characters](./lc/2019-10-06_L1002.md)  2️⃣
 - [1089. Duplicate Zeros](./lc/2019-12-25_L1089.md)
+- [1108. Defanging an IP Address](./lc/2019-12-25_L1108.md)
 - [1185. Day of the Week](./lc/2019-10-10_L1185.md)
 - [1200. Minimum Absolute Difference](./lc/2019-10-06_L1200.md)  2️⃣
 - [1287. Element Appearing More Than 25% In Sorted Array](./lc/2019-12-25_L1287.md)
+- [1295. Find Numbers with Even Number of Digits](./lc/2019-12-25_L1295.md)
 
 ## Dynamic Programming
 
@@ -54,6 +59,8 @@ Divide by tags.  L1287
 - [520. Detect Capital](./lc/2019-12-24_L520.md)
 - [541. Reverse String II](./lc/2019-12-24_L541.md)
 - [557. Reverse Words in a String III](./lc/2019-12-24_L557.md)
+- [709. To Lower Case](./lc/2019-12-25_L709.md)
+- [917. Reverse Only Letters](./lc/2019-12-25_L917.md)
 - [1189. Maximum Number of Balloons](./lc/2019-10-08_L1189.md)  2️⃣
 
 ### Hash table
@@ -62,6 +69,7 @@ Divide by tags.  L1287
 - [219. Contains Duplicate II](./lc/2019-12-23_L219.md)
 - [454. 4Sum II](./lc/2019-10-09_L454.md)
 - [500. Keyboard Row](./lc/2019-09-27_L500.md)
+- [961. N-Repeated Element in Size 2N Array](./lc/2019-12-25_L961.md)
 
 ### Linked list
 
@@ -69,7 +77,9 @@ Divide by tags.  L1287
 - [83. Remove Duplicates from Sorted List](./lc/2019-10-01_L83.md)
 - [203. Remove Linked List Elements](./lc/2019-09-28_L203.md)
 - [206. Reverse Linked List](./lc/2019-09-30_L206.md) 2️⃣
+- [237. Delete Node in a Linked List](./lc/2019-12-25_L237.md)
 -  [876. Middle of the Linked List](./lc/2019-09-29_L876.md)
+-  [1290. Convert Binary Number in a Linked List to Integer](./lc/2019-12-25_L1290.md)
 
 ## Stack 
 
@@ -105,6 +115,7 @@ Divide by tags.  L1287
 - [172. Factorial Trailing Zeroes](./lc/2019-12-23_L172.md)
 - [231. Power of Two](./lc/2019-12-23_L231.md)
 - [258. Add Digits](./lc/2019-12-24_L258.md)
+- [263. Ugly Number](./lc/2019-12-26_L263.md)
 - [268. Missing Number](./lc/2019-12-24_L268.md)
 - [367. Valid Perfect Square](./lc/2019-10-02_L367.md)
 - [372. Super Pow](./lc/2019-10-30_L372.md)
@@ -144,3 +155,8 @@ Divide by tags.  L1287
 - [136. Single Number](./lc/2019-12-22_L136.md)
 - [342. Power of Four](./lc/2019-12-24_L342.md)
 - [389. Find the Difference](./lc/2019-12-24_L389.md)
+
+
+### LCP
+
+- [LCP 1. Guess Numbers](./lc/2019-12-25_LCP_1.md)
