@@ -55,20 +55,31 @@ let h5 = URL(string:"https://www.fazzaco.com/h5/getCompanyDetailA?languageType=0
 openDetailSceneByURL(scheme)
 openDetailSceneByURL(h5)
 
-func checkRecord(_ s: String) -> Bool {
-    let ss = s.map { return $0 }
-    if ss.filter({ $0 == Character("A")}).count >= 2 {
+func canConstruct(_ ransomNote: String, _ magazine: String) -> Bool {
+    guard ransomNote.count <= magazine.count else {
         return false
     }
-    if s.contains("LLL") {
-        return false
+    
+    var rcs = ransomNote.utf8CString
+    rcs.removeLast()
+    var mcs = magazine.utf8CString
+    mcs.removeLast()
+    
+    let offset = 97
+    var table = Array(repeating: 0, count: 26)
+    for element in mcs {
+        table[Int(element)-offset] += 1
+    }
+    
+    for element in rcs {
+        table[Int(element)-offset] -= 1
+        if table[Int(element)-offset] < 0 {
+            return false
+        }
     }
     
     return true
 }
-
-let a = "PPALLP"
-print(checkRecord(a))
 
 
 
