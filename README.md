@@ -35,6 +35,7 @@ Divide by tags.  L1287
 - [941. Valid Mountain Array](./lc/2019-12-25_L941.md)
 - [1002. Find Common Characters](./lc/2019-10-06_L1002.md)  2️⃣
 - [1089. Duplicate Zeros](./lc/2019-12-25_L1089.md)
+- [1108. Defanging an IP Address](./lc/2019-12-25_L1108.md)
 - [1185. Day of the Week](./lc/2019-10-10_L1185.md)
 - [1200. Minimum Absolute Difference](./lc/2019-10-06_L1200.md)  2️⃣
 - [1287. Element Appearing More Than 25% In Sorted Array](./lc/2019-12-25_L1287.md)
@@ -114,6 +115,7 @@ Divide by tags.  L1287
 - [172. Factorial Trailing Zeroes](./lc/2019-12-23_L172.md)
 - [231. Power of Two](./lc/2019-12-23_L231.md)
 - [258. Add Digits](./lc/2019-12-24_L258.md)
+- [263. Ugly Number](./lc/2019-12-26_L263.md)
 - [268. Missing Number](./lc/2019-12-24_L268.md)
 - [367. Valid Perfect Square](./lc/2019-10-02_L367.md)
 - [372. Super Pow](./lc/2019-10-30_L372.md)
