@@ -55,28 +55,22 @@ let h5 = URL(string:"https://www.fazzaco.com/h5/getCompanyDetailA?languageType=0
 openDetailSceneByURL(scheme)
 openDetailSceneByURL(h5)
 
-func checkRecord(_ s: String) -> Bool {
-    let ss = s.map { return $0 }
-    if ss.filter({ $0 == Character("A")}).count >= 2 {
-        return false
-    }
-    if s.contains("LLL") {
-        return false
-    }
+// 82
+func deleteDuplicates(_ head: ListNode?) -> ListNode? {
     
-    return true
 }
 
-let a = "PPALLP"
-print(checkRecord(a))
+let node2 = ListNode(1)
+let node4 = ListNode(2)
+let node3 = ListNode(2)
+let node5 = ListNode(4)
 
+node2.next = node4
+node4.next = node3
+node3.next = node5
 
-
-
-
-
-
-
+let h = deleteDuplicates(node2)
+printList(h)
 
 
 
