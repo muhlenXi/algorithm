@@ -57,19 +57,49 @@ openDetailSceneByURL(h5)
 
 // 82
 func deleteDuplicates(_ head: ListNode?) -> ListNode? {
+    let top = ListNode(110)
+    top.next = head
     
+    var current: ListNode? = top
+    
+    while current != nil {
+        if current?.next != nil {
+            let val = current!.next!.val
+            var count = 0
+            var node = current!.next
+            while node != nil && node!.val == val{
+                count += 1
+                node = node?.next
+            }
+            if count == 1 {
+                current = current?.next
+            } else {
+                current?.next = node
+            }
+        } else {
+            current = current?.next
+        }
+    }
+    
+    return top.next
 }
 
-let node2 = ListNode(1)
-let node4 = ListNode(2)
-let node3 = ListNode(2)
+let node1 = ListNode(1)
+let node2 = ListNode(2)
+let node3 = ListNode(3)
+let node4 = ListNode(3)
 let node5 = ListNode(4)
+let node6 = ListNode(4)
+let node7 = ListNode(5)
 
-node2.next = node4
-node4.next = node3
-node3.next = node5
+node1.next = node2
+node2.next = node3
+node3.next = node4
+node4.next = node5
+node5.next = node6
+node6.next = node7
 
-let h = deleteDuplicates(node2)
+let h = deleteDuplicates(node1)
 printList(h)
 
 
