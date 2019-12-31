@@ -55,22 +55,43 @@ let h5 = URL(string:"https://www.fazzaco.com/h5/getCompanyDetailA?languageType=0
 openDetailSceneByURL(scheme)
 openDetailSceneByURL(h5)
 
-// 82
-func deleteDuplicates(_ head: ListNode?) -> ListNode? {
-    
-}
-
-let node2 = ListNode(1)
-let node4 = ListNode(2)
-let node3 = ListNode(2)
+let node1 = ListNode(1)
+let node2 = ListNode(2)
+let node3 = ListNode(3)
+let node4 = ListNode(3)
 let node5 = ListNode(4)
+let node6 = ListNode(4)
+let node7 = ListNode(5)
 
-node2.next = node4
-node4.next = node3
-node3.next = node5
+node1.next = node2
+node2.next = node3
+node3.next = node4
+node4.next = node5
+node5.next = node6
+node6.next = node7
 
-let h = deleteDuplicates(node2)
-printList(h)
+
+
+let t1 = TreeNode(1)
+let t2 = TreeNode(2)
+let t3 = TreeNode(3)
+let t4 = TreeNode(4)
+let t5 = TreeNode(5)
+let t6 = TreeNode(6)
+let t7 = TreeNode(7)
+let t8 = TreeNode(8)
+
+t1.left = t2
+t1.right = t3
+t2.left = t4
+t2.right = t5
+t3.left = t6
+t3.right = t7
+//t7.left = t8
+
+
+
+
 
 
 
