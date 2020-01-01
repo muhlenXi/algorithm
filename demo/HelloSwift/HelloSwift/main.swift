@@ -80,16 +80,56 @@ let t5 = TreeNode(5)
 let t6 = TreeNode(6)
 let t7 = TreeNode(7)
 let t8 = TreeNode(8)
+let t9 = TreeNode(9)
+let t10 = TreeNode(10)
+let t11 = TreeNode(11)
+let t12 = TreeNode(12)
+let t13 = TreeNode(13)
+let t14 = TreeNode(14)
+let t15 = TreeNode(15)
 
 t1.left = t2
 t1.right = t3
 t2.left = t4
 t2.right = t5
 t3.left = t6
-t3.right = t7
-//t7.left = t8
+//t3.right = t7
+//t4.left = t8
+//t4.right = t9
+//t5.left = t10
+//t5.right = t11
+//t6.left = t12
+//t6.right = t13
+//t7.left = t14
+//t7.right = t15
 
+func countNodes(_ root: TreeNode?) -> Int {
+    guard let head = root else { return 0 }
+    
+    var node: TreeNode? = head
+    var ldepth = 0
+    while node != nil {
+        ldepth += 1
+        node = node?.left
+    }
+    
+    var rdepth = 0
+    node = head
+    while node != nil {
+        rdepth += 1
+        node = node?.right
+    }
+    
+    // 满二叉树节点总数 m = 2 ^ depth - 1
+    let fullCount = Int(pow(2.0, Double(ldepth)))-1
+    if ldepth == rdepth {
+        return fullCount
+    } else {
+        return countNodes(head.left) + 1 + countNodes(head.right)
+    }
+}
 
+print(countNodes(t1))
 
 
 
