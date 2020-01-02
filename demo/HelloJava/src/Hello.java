@@ -5,20 +5,8 @@ import java.util.List;
 
 public class Hello {
     public void test() {
-        Node n1 = new Node(1);
-        Node n2 = new Node(2);
-        Node n3 = new Node(3);
-        Node n4 = new Node(4);
-        Node n5 = new Node(5);
-        Node n6 = new Node(6);
 
-        n3.children = Arrays.asList(n5, n6);
-        n1.children = Arrays.asList(n3, n2, n4);
-
-        System.out.println(n3.children);
-        //System.out.println(preorder(n1));
     }
-
 
     public List<Integer> preorder(Node root) {
         List<Integer> list = new ArrayList<Integer>();
@@ -50,6 +38,8 @@ class Node {
         val = _val;
         children = _children;
     }
-};
+}
+
+
 
 

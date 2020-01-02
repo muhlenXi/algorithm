@@ -71,18 +71,17 @@ node5.next = node6
 node6.next = node7
 
 
-// [3,1,5,0,2,4,6,null,null,null,3]
-let t1: TreeNode? = TreeNode(3)
-let t2: TreeNode? = TreeNode(1)
-let t3: TreeNode? = TreeNode(1)
-let t4: TreeNode? = TreeNode(0)
-let t5: TreeNode? = TreeNode(2)
-let t6: TreeNode? = TreeNode(4)
+let t1: TreeNode? = TreeNode(1)
+let t2: TreeNode? = TreeNode(2)
+let t3: TreeNode? = TreeNode(5)
+let t4: TreeNode? = TreeNode(3)
+let t5: TreeNode? = TreeNode(4)
+let t6: TreeNode? = nil
 let t7: TreeNode? = TreeNode(6)
-let t8: TreeNode? = nil
-let t9: TreeNode? = nil
-let t10: TreeNode? = nil
-let t11: TreeNode? = TreeNode(3)
+let t8: TreeNode? = TreeNode(8)
+let t9: TreeNode? = TreeNode(9)
+let t10: TreeNode? = TreeNode(10)
+let t11: TreeNode? = TreeNode(11)
 let t12: TreeNode? = TreeNode(12)
 let t13: TreeNode? = TreeNode(13)
 let t14: TreeNode? = TreeNode(14)
@@ -90,10 +89,10 @@ let t15: TreeNode? = TreeNode(15)
 
 t1?.left = t2
 t1?.right = t3
-//t2?.left = t4
-//t2?.right = t5
-//t3?.left = t4
-//t3?.right = t5
+t2?.left = t4
+t2?.right = t5
+t3?.left = t6
+t3?.right = t7
 //t4?.left = t8
 //t4?.right = t9
 //t5?.left = t10
@@ -103,27 +102,38 @@ t1?.right = t3
 //t7?.left = t14
 //t7?.right = t15
 
-
-func isSymmetric(_ root: TreeNode?) -> Bool {
-    guard let r = root else {
-        return true
-    }
+func flatten(_ root: TreeNode?) {
+    var list = [TreeNode]()
+    preorder(&list, root)
     
-    var stack = [[r]]
-    while !stack.isEmpty {
-        let rows = stack.removeLast()
-        let vals = [Int]()
-        for element in rows {
-            
+    guard list.count > 1 else {
+        return
+    }
+    for index in 0..<list.count {
+        list[index].left = nil
+        if index == list.count-1 {
+            list[index].right = nil
+        } else {
+            list[index].right = list[index+1]
         }
     }
-    
-    
-    
-    return false
 }
 
-print(isSymmetric(t1))
+func preorder(_ list: inout [TreeNode], _ root: TreeNode?) {
+    guard let r = root else {
+        return
+    }
+    
+    list.append(r)
+    preorder(&list, r.left)
+    preorder(&list, r.right)
+}
+
+flatten(t1)
+
+
+
+
 
 
 
