@@ -57,18 +57,57 @@ openDetailSceneByURL(h5)
 
 let node1 = ListNode(1)
 let node2 = ListNode(2)
-let node3 = ListNode(3)
-let node4 = ListNode(3)
-let node5 = ListNode(4)
-let node6 = ListNode(4)
-let node7 = ListNode(5)
+let node3 = ListNode(1)
+let node4 = ListNode(1)
+let node5 = ListNode(5)
+let node6 = ListNode(6)
+let node7 = ListNode(7)
 
 node1.next = node2
 node2.next = node3
-node3.next = node4
-node4.next = node5
-node5.next = node6
-node6.next = node7
+//node3.next = node4
+//node4.next = node5
+//node5.next = node6
+//node6.next = node7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 let t1: TreeNode? = TreeNode(1)
@@ -102,34 +141,7 @@ t3?.right = t7
 //t7?.left = t14
 //t7?.right = t15
 
-func flatten(_ root: TreeNode?) {
-    var list = [TreeNode]()
-    preorder(&list, root)
-    
-    guard list.count > 1 else {
-        return
-    }
-    for index in 0..<list.count {
-        list[index].left = nil
-        if index == list.count-1 {
-            list[index].right = nil
-        } else {
-            list[index].right = list[index+1]
-        }
-    }
-}
 
-func preorder(_ list: inout [TreeNode], _ root: TreeNode?) {
-    guard let r = root else {
-        return
-    }
-    
-    list.append(r)
-    preorder(&list, r.left)
-    preorder(&list, r.right)
-}
-
-flatten(t1)
 
 
 
