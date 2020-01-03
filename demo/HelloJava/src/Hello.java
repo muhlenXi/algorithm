@@ -8,35 +8,17 @@ public class Hello {
 
     }
 
-    public List<Integer> preorder(Node root) {
-        List<Integer> list = new ArrayList<Integer>();
-        list.add(root.val);
-
-        if (root.children == null) {
-            return list;
+    public boolean hasCycle(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                return true;
+            }
         }
-        for (int i = 0; i < root.children.size(); i++) {
-            list.addAll(list.size()-1, preorder(root.children.get(i)));
-        }
-
-        return  list;
-    }
-}
-
-
-class Node {
-    public int val;
-    public List<Node> children;
-
-    public Node() {}
-
-    public Node(int _val) {
-        val = _val;
-    }
-
-    public Node(int _val, List<Node> _children) {
-        val = _val;
-        children = _children;
+        return  false;
     }
 }
 
