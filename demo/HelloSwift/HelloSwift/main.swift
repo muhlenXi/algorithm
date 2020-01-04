@@ -55,46 +55,19 @@ let h5 = URL(string:"https://www.fazzaco.com/h5/getCompanyDetailA?languageType=0
 openDetailSceneByURL(scheme)
 openDetailSceneByURL(h5)
 
-let node1 = ListNode(1)
-let node2 = ListNode(2)
-let node3 = ListNode(1)
-let node4 = ListNode(1)
-let node5 = ListNode(5)
-let node6 = ListNode(6)
-let node7 = ListNode(7)
-
-node1.next = node2
-node2.next = node3
-//node3.next = node4
-//node4.next = node5
-//node5.next = node6
-//node6.next = node7
-
-func isSubsequence(_ s: String, _ t: String) -> Bool {
-    guard s.count > 0 else {
-        return true
-    }
+//748
+func shortestCompletingWord(_ licensePlate: String, _ words: [String]) -> String {
+    let licenses = licensePlate.lowercased().map { return $0 }.filter {$0.asciiValue! >= 97 && $0.asciiValue! <= 123  }
     
-    let ss = s.map { return $0 }
-    var si = 0
-    for element in t {
-        if si < ss.count {
-            if ss[si] == element {
-                si += 1
-            }
-        } else {
-            break
-        }
-    }
-    if si == ss.count {
-        return true
-    }
-    return false
+    
+    return ""
 }
 
-let s = "axc"
-let t = "ahbgdc"
-print(isSubsequence(s, t))
+let l = "a678zz"
+let w = ["abz", "azzb"]
+print(shortestCompletingWord(l, w))
+
+
 
 
 
