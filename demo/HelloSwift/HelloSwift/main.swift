@@ -70,7 +70,31 @@ node2.next = node3
 //node5.next = node6
 //node6.next = node7
 
+func isSubsequence(_ s: String, _ t: String) -> Bool {
+    guard s.count > 0 else {
+        return true
+    }
+    
+    let ss = s.map { return $0 }
+    var si = 0
+    for element in t {
+        if si < ss.count {
+            if ss[si] == element {
+                si += 1
+            }
+        } else {
+            break
+        }
+    }
+    if si == ss.count {
+        return true
+    }
+    return false
+}
 
+let s = "axc"
+let t = "ahbgdc"
+print(isSubsequence(s, t))
 
 
 
