@@ -55,17 +55,6 @@ let h5 = URL(string:"https://www.fazzaco.com/h5/getCompanyDetailA?languageType=0
 openDetailSceneByURL(scheme)
 openDetailSceneByURL(h5)
 
-//748
-func shortestCompletingWord(_ licensePlate: String, _ words: [String]) -> String {
-    let licenses = licensePlate.lowercased().map { return $0 }.filter {$0.asciiValue! >= 97 && $0.asciiValue! <= 123  }
-    
-    
-    return ""
-}
-
-let l = "a678zz"
-let w = ["abz", "azzb"]
-print(shortestCompletingWord(l, w))
 
 
 
@@ -105,19 +94,20 @@ print(shortestCompletingWord(l, w))
 
 
 
+let array = [10,5,-3,3,2,nil,11,3,-2,nil,1]
 
 
 let t1: TreeNode? = TreeNode(1)
 let t2: TreeNode? = TreeNode(2)
-let t3: TreeNode? = TreeNode(5)
-let t4: TreeNode? = TreeNode(3)
-let t5: TreeNode? = TreeNode(4)
-let t6: TreeNode? = nil
-let t7: TreeNode? = TreeNode(6)
-let t8: TreeNode? = TreeNode(8)
-let t9: TreeNode? = TreeNode(9)
-let t10: TreeNode? = TreeNode(10)
-let t11: TreeNode? = TreeNode(11)
+let t3: TreeNode? = TreeNode(3)
+let t4: TreeNode? = TreeNode(4)
+let t5: TreeNode? = TreeNode(5)
+let t6: TreeNode? = TreeNode(6)
+let t7: TreeNode? = TreeNode(7)
+let t8: TreeNode? = TreeNode(3)
+let t9: TreeNode? = TreeNode(-2)
+let t10: TreeNode? = nil
+let t11: TreeNode? = TreeNode(1)
 let t12: TreeNode? = TreeNode(12)
 let t13: TreeNode? = TreeNode(13)
 let t14: TreeNode? = TreeNode(14)
@@ -138,6 +128,47 @@ t3?.right = t7
 //t7?.left = t14
 //t7?.right = t15
 
+// 113
+func pathSum(_ root: TreeNode?, _ sum: Int) -> [[Int]] {
+    var ret = [[Int]]()
+    guard root != nil else {
+        return ret
+    }
+    
+    
+    
+    return [[Int]]()
+}
+
+func binaryTreePaths(_ root: TreeNode?) -> [String] {
+    guard let node = root else {
+        return [String]()
+    }
+    
+    if node.left == nil, node.right == nil {
+        return ["\(node.val)"]
+    }
+    
+    var strings = [String]()
+    
+    for element in binaryTreePaths(node.left) {
+        var total = [String]()
+        total.append("\(node.val)")
+        total.append(element)
+        strings.append(total.joined(separator: "->"))
+    }
+    
+    for element in binaryTreePaths(node.right){
+        var total = [String]()
+        total.append("\(node.val)")
+        total.append(element)
+        strings.append(total.joined(separator: "->"))
+    }
+    
+    return strings
+}
+
+print(binaryTreePaths(t1))
 
 
 
