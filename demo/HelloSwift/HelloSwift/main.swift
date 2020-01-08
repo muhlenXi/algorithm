@@ -58,9 +58,22 @@ openDetailSceneByURL(h5)
 
 
 
+func sumZero(_ n: Int) -> [Int] {
+    guard n >= 0 else {
+        return [0]
+    }
+    
+    var result = [Int]()
+    var sum = 0
+    for index in 0..<n-1 {
+        result.append(index)
+        sum += index
+    }
+    result.append(-sum)
+    return result
+}
 
-
-
+print(sumZero(6))
 
 
 
