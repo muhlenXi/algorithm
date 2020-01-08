@@ -55,34 +55,30 @@ let h5 = URL(string:"https://www.fazzaco.com/h5/getCompanyDetailA?languageType=0
 openDetailSceneByURL(scheme)
 openDetailSceneByURL(h5)
 
-
-
-
-func sumZero(_ n: Int) -> [Int] {
-    guard n >= 0 else {
-        return [0]
+func isMonotonic(_ A: [Int]) -> Bool {
+    var cleanNumbers = [Int]()
+    cleanNumbers.append(A.first!)
+    for element in A {
+        if element != cleanNumbers.last! {
+            cleanNumbers.append(element)
+        }
     }
     
-    var result = [Int]()
-    var sum = 0
-    for index in 0..<n-1 {
-        result.append(index)
-        sum += index
+    guard cleanNumbers.count > 2 else {
+        return true
     }
-    result.append(-sum)
-    return result
+    
+    let isUp = (cleanNumbers.last! - cleanNumbers.first!) > 0
+    for index in 0...cleanNumbers.count-1-1 {
+       let ret = (cleanNumbers[index+1] - cleanNumbers[index]) > 0
+        if ret != isUp {
+            return false
+        }
+    }
+    return true
 }
 
-print(sumZero(6))
-
-
-
-
-
-
-
-
-
+print(isMonotonic([6,5,4,5]))
 
 
 
@@ -103,18 +99,18 @@ print(sumZero(6))
 
 
 // [15,9,21,7,13,19,23,5,null,11,null,17]
-let t1: TreeNode? = TreeNode(15)
-let t2: TreeNode? = TreeNode(9)
-let t3: TreeNode? = TreeNode(21)
-let t4: TreeNode? = TreeNode(7)
-let t5: TreeNode? = TreeNode(13)
-let t6: TreeNode? = TreeNode(19)
-let t7: TreeNode? = TreeNode(23)
-let t8: TreeNode? = TreeNode(5)
-let t9: TreeNode? = nil
-let t10: TreeNode? = TreeNode(11)
-let t11: TreeNode? = nil
-let t12: TreeNode? = TreeNode(17)
+let t1: TreeNode? = TreeNode(1)
+let t2: TreeNode? = TreeNode(0)
+let t3: TreeNode? = TreeNode(1)
+let t4: TreeNode? = TreeNode(0)
+let t5: TreeNode? = TreeNode(1)
+let t6: TreeNode? = TreeNode(0)
+let t7: TreeNode? = TreeNode(1)
+let t8: TreeNode? = TreeNode(8)
+let t9: TreeNode? = TreeNode(9)
+let t10: TreeNode? = TreeNode(10)
+let t11: TreeNode? = TreeNode(11)
+let t12: TreeNode? = TreeNode(12)
 let t13: TreeNode? = TreeNode(13)
 let t14: TreeNode? = TreeNode(14)
 let t15: TreeNode? = TreeNode(15)
@@ -126,14 +122,15 @@ t2?.left = t4
 t2?.right = t5
 t3?.left = t6
 t3?.right = t7
-t4?.left = t8
-t4?.right = t9
-t5?.left = t10
-t5?.right = t11
-t6?.left = t12
+//t4?.left = t8
+//t4?.right = t9
+//t5?.left = t10
+//t5?.right = t11
+//t6?.left = t12
 //t6?.right = t13
 //t7?.left = t14
 //t7?.right = t15
+
 
 
 
