@@ -56,29 +56,29 @@ openDetailSceneByURL(scheme)
 openDetailSceneByURL(h5)
 
 func isMonotonic(_ A: [Int]) -> Bool {
-    var cleanNumbers = [Int]()
-    cleanNumbers.append(A.first!)
-    for element in A {
-        if element != cleanNumbers.last! {
-            cleanNumbers.append(element)
-        }
-    }
-    
-    guard cleanNumbers.count > 2 else {
+    if A.count <= 2 {
         return true
     }
-    
-    let isUp = (cleanNumbers.last! - cleanNumbers.first!) > 0
-    for index in 0...cleanNumbers.count-1-1 {
-       let ret = (cleanNumbers[index+1] - cleanNumbers[index]) > 0
-        if ret != isUp {
-            return false
+   
+    var morePairs = 0
+    var lessPairs = 0
+    for index in 1...A.count-1 {
+        let val = A[index] - A[index-1]
+        if val > 0 {
+            morePairs += 1
+        } else if val < 0 {
+            lessPairs += 1
         }
     }
-    return true
+    
+    if morePairs > 0 && lessPairs > 0 {
+        return false
+    } else {
+        return true
+    }
 }
 
-print(isMonotonic([6,5,4,5]))
+print(isMonotonic([2,1,2]))
 
 
 
