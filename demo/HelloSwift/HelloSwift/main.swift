@@ -55,30 +55,17 @@ let h5 = URL(string:"https://www.fazzaco.com/h5/getCompanyDetailA?languageType=0
 openDetailSceneByURL(scheme)
 openDetailSceneByURL(h5)
 
-func isMonotonic(_ A: [Int]) -> Bool {
-    if A.count <= 2 {
-        return true
-    }
-   
-    var morePairs = 0
-    var lessPairs = 0
-    for index in 1...A.count-1 {
-        let val = A[index] - A[index-1]
-        if val > 0 {
-            morePairs += 1
-        } else if val < 0 {
-            lessPairs += 1
-        }
-    }
-    
-    if morePairs > 0 && lessPairs > 0 {
-        return false
-    } else {
-        return true
-    }
-}
 
-print(isMonotonic([2,1,2]))
+
+
+
+
+
+
+
+
+
+
 
 
 
