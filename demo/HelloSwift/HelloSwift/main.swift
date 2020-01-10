@@ -83,8 +83,6 @@ openDetailSceneByURL(h5)
 
 
 
-
-
 // [15,9,21,7,13,19,23,5,null,11,null,17]
 let t1: TreeNode? = TreeNode(1)
 let t2: TreeNode? = TreeNode(0)
