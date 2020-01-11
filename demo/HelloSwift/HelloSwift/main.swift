@@ -56,7 +56,20 @@ openDetailSceneByURL(scheme)
 openDetailSceneByURL(h5)
 
 
+func largestPerimeter(_ A: [Int]) -> Int {
+    let sorted = A.sorted(by: >)
+    for index in 0...A.count-1-2 {
+        let a = sorted[index]
+        let b = sorted[index+1]
+        let c = sorted[index+2]
+        if b + c > a {
+            return a + b + c
+        }
+    }
+    return 0
+}
 
+print(largestPerimeter([3, 6, 2, 3]))
 
 
 
