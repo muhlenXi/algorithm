@@ -9,34 +9,9 @@
 import Foundation
 
 
-func permute(_ nums: [Int]) -> [[Int]] {
-    var result = [[Int]]()
-    
-    return result
-}
 
-// 885
-func spiralMatrixIII(_ R: Int, _ C: Int, _ r0: Int, _ c0: Int) -> [[Int]] {
-    var points = [[Int]]()
-    
-    var row = r0
-    var column = c0
-    while column < C {
-        points.append([row, column])
-        column += 1
-    }
-    row += 1
-    
-    
-    return points
-}
 
-var R = 5
-var C = 6
-var r0 = 1
-var c0 = 4
 
-print(spiralMatrixIII(R, C, r0, c0))
 
 
 
