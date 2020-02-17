@@ -78,9 +78,38 @@ class MyStack {
     }
 }
 
+func check() {
+    let year = 2099
+    let month = 12
+    let day = 31
+    
+    for y in 2020...2099 {
+        for m in 1...month {
+            for d in 1...day {
+                let s = "\(y)" + (m > 9 ? "\(m)" : "0\(m)") + (d > 9 ? "\(d)" : "0\(d)")
+                var ss = s.map {return $0 }
+                // 2020 0202
+                var low = 0
+                var high = ss.count-1
+                while low < high {
+                    if ss[low] == ss[high] {
+                        low += 1
+                        high -= 1
+                    } else {
+                        break
+                    }
+                }
+                if low > high {
+                    ss.insert(Character("-"), at: 4)
+                    print(String(ss))
+                }
+            }
+        }
+    }
+}
 
 
-
+check()
 
 
 
