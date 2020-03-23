@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C838FE862424AF7F00308BBC /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = C838FE852424AF7F00308BBC /* Sort.swift */; };
 		C88C1D8F2347127D008116FA /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88C1D8E2347127D008116FA /* Stack.swift */; };
 		C88C1D97234A4185008116FA /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88C1D96234A4185008116FA /* TreeNode.swift */; };
 		C8C34D4A2333AA3000CD5225 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C34D492333AA3000CD5225 /* main.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C838FE852424AF7F00308BBC /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
 		C88C1D8E2347127D008116FA /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		C88C1D96234A4185008116FA /* TreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
 		C8C34D462333AA3000CD5225 /* HelloSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloSwift; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				C8C34D492333AA3000CD5225 /* main.swift */,
+				C838FE852424AF7F00308BBC /* Sort.swift */,
 			);
 			path = HelloSwift;
 			sourceTree = "<group>";
@@ -120,6 +123,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = C8C34D3D2333AA3000CD5225;
 			productRefGroup = C8C34D472333AA3000CD5225 /* Products */;
@@ -139,6 +143,7 @@
 				C88C1D8F2347127D008116FA /* Stack.swift in Sources */,
 				C8E3CA68239BD6F100A218B5 /* ListNode.swift in Sources */,
 				C88C1D97234A4185008116FA /* TreeNode.swift in Sources */,
+				C838FE862424AF7F00308BBC /* Sort.swift in Sources */,
 				C8C34D4A2333AA3000CD5225 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

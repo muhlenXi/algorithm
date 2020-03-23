@@ -6,6 +6,7 @@
 //  Copyright © 2019 muhlenXi. All rights reserved.
 //
 
+<<<<<<< HEAD
 import Foundation
 
 
@@ -171,12 +172,18 @@ t7?.right = t15
 
 
 
+=======
+//
+>>>>>>> Add sort
+
+import Foundation
+
+var nums = [8, 6, 4, 2, 9, 7, 5, 3, 1]
 
 
 
 
-
-
+print(merge(nums))
 
 
 
