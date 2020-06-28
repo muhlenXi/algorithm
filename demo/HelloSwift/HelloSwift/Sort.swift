@@ -258,5 +258,49 @@ func addElementToBucket(_ bucket: inout [Int], _ element: Int) {
     }
 }
 
+<<<<<<< HEAD
+=======
+// MARK: - Heap
+
+func heap(_ numbers: inout [Int]) {
+    var lastIndex = numbers.count - 1
+    while lastIndex >= 0 {
+        buildHeap(&numbers, lastIndex)
+        numbers.swapAt(0, lastIndex)
+        lastIndex -= 1
+    }
+}
+
+// 构建最大堆
+func buildHeap(_ numbers: inout [Int], _ lastIndex: Int) {
+    var parent = (lastIndex - 1) / 2
+    while parent >= 0 {
+        heapify(&numbers, parent, lastIndex)
+        parent -= 1
+    }
+}
+
+// 对指定 index 元素进行 heapify, lastIndex 数组的最后一个元素的 index
+func heapify(_ numbers: inout [Int], _ index: Int, _ lastIndex: Int) {
+    guard index < lastIndex else {
+        return
+    }
+    
+    let left = index * 2 + 1
+    let right = index * 2 + 2
+    var max = index
+    if left <= lastIndex && numbers[left] > numbers[max] {
+        max = left
+    }
+    if right <= lastIndex && numbers[right] > numbers[max] {
+        max = right
+    }
+    if max != index {
+        numbers.swapAt(index, max)
+        heapify(&numbers, max, lastIndex)
+    }
+}
+
+>>>>>>> 96e434f6575fe09f8ee45ce006d26d3336394d1b
 
 
