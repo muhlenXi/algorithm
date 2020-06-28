@@ -48,6 +48,6 @@ def twoSum1(self, nums: List[int], target: int) -> List[int]:
     return []
 ```
 
-### 技巧
+### Tip
 
 - 使用哈希表对遍历过的元素进行缓存。
