@@ -84,7 +84,7 @@ func shell(_ numbers: inout [Int]) {
 
 
 func merge(_ numbers: [Int]) -> [Int] {
-    return divide(nums)
+    return divide(numbers)
 }
 
 func divide(_ numbers: [Int]) -> [Int] {
@@ -258,8 +258,6 @@ func addElementToBucket(_ bucket: inout [Int], _ element: Int) {
     }
 }
 
-<<<<<<< HEAD
-=======
 // MARK: - Heap
 
 func heap(_ numbers: inout [Int]) {
@@ -300,7 +298,5 @@ func heapify(_ numbers: inout [Int], _ index: Int, _ lastIndex: Int) {
         heapify(&numbers, max, lastIndex)
     }
 }
-
->>>>>>> 96e434f6575fe09f8ee45ce006d26d3336394d1b
 
 
