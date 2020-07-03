@@ -7,32 +7,26 @@ class TreeNode:
         self.right = None
 
 class Solution:
-    def inorderTraversal(self, root: TreeNode) -> List[int]:
-        if root == None:
-            return []
-        else:
-            return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right)
-
-    def inorderTraversal1(self, root: TreeNode) -> List[int]:
-        if root == None:
-            return  []
+    def sortedArrayToBST(self, nums: List[int]) -> TreeNode:
+        if len(nums) == 0:
+            return None
 
         nodes = []
-        values = []
-        node = root
-        while node != None:
-            nodes.append(node)
-            node = node.left
+        for num in nums:
+            nodes.append(TreeNode(num))
 
-        while len(nodes) > 0:
-            node = nodes.pop()
-            values.append(node.val)
-            node = node.right
-            while node != None:
-                nodes.append(node)
-                node = node.left
+        low = (len(nodes) - 1) / 2
+        high = low + 1
+        while low > 0:
+            if low - 1 >= 0:
+                if nodes[low].left != None:
+                    nodes[low].left = nodes[low-1]
 
-        return  values
+
+
+
+
+list = [-15, -10, -3, 0, 5, 9, 12]
 
 
 
@@ -51,6 +45,4 @@ t2.right = t5
 t3.left = t6
 t3.right = t7
 
-print(solution.inorderTraversal(t1))
-print(solution.inorderTraversal1(t1))
-
+print(solution.levelOrder(t1))
