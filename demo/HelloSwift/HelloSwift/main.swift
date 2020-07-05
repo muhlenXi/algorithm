@@ -25,7 +25,6 @@ t2.right = t5
 t3.left = t6
 t3.right = t7
 
-print(inorderTraversal(t1))
-print(inorderTraversal1(t1))
+
 
 
