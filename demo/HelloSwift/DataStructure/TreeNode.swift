@@ -19,3 +19,13 @@ class TreeNode {
         self.right = nil
     }
 }
+
+class Node {
+    var val: Int
+    var children: [Node]
+    
+    init(_ val: Int) {
+        self.val = val
+        self.children = []
+    }
+}

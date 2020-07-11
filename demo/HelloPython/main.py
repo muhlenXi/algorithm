@@ -7,30 +7,50 @@ class TreeNode:
         self.right = None
 
 class Solution:
-    def sortedArrayToBST(self, nums: List[int]) -> TreeNode:
-        if len(nums) == 0:
-            return None
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        if len(nums1) == 0 or len(nums2) == 0:
+            return []
 
-        nodes = []
-        for num in nums:
-            nodes.append(TreeNode(num))
+        n1 = sorted(nums1)
+        n2 = sorted(nums2)
+        i1 = 0
+        i2 = 0
+        common = []
+        while i1 < len(n1) and i2 < len(n2):
+            if n1[i1] == n2[i2]:
+                common.append(n1[i1])
+                i1 += 1
+                i2 += 1
+            elif n1[i1] > n2[i2]:
+                i2 += 1
+            else:
+                i1 += 1
+        return common
 
-        low = (len(nodes) - 1) / 2
-        high = low + 1
-        while low > 0:
-            if low - 1 >= 0:
-                if nodes[low].left != None:
-                    nodes[low].left = nodes[low-1]
 
 
 
 
 
-list = [-15, -10, -3, 0, 5, 9, 12]
 
 
 
 solution = Solution()
+list1 = [1, 2, 2, 1, 5, 4]
+list2 = [4, 5]
+print(solution.intersect(list1, list2))
+
+
+
+
+
+
+
+
+
+
+
+
 t1 = TreeNode(1)
 t2 = TreeNode(2)
 t3 = TreeNode(3)
@@ -44,5 +64,3 @@ t2.left = t4
 t2.right = t5
 t3.left = t6
 t3.right = t7
-
-print(solution.levelOrder(t1))
