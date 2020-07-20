@@ -12,7 +12,7 @@
 
 - [Divide and Conquer](./solution/divide-and-conquer/README_DivideAndConquer.md)
 
-- [Greedy](./solution/Greedy/README_Greedy.md)
+- [Greedy](./solution/greedy/README_Greedy.md)
 
 - [Hash Table](./solution/hash-table/README_HashTable.md)
  
