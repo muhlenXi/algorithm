@@ -8,17 +8,37 @@ class TreeNode:
         self.right = right
 
 class Solution:
-    def divisorGame(self, N: int) -> bool:
-        return N % 2 == 0
+    def stoneGame(self, piles: [int]) -> bool:
+        table = [[(0, 0) for i in range(len(piles))] for j in range(len(piles))]
+        for i in range(len(piles)):
+            table[i][i] = (piles[i], 0)
 
-    def test(self):
-        s = "123"
-        print(s[1:])
+        for l in range(1, len(piles)):
+            for i in range(0, len(piles)-l):
+                j = i + l
+                left = piles[i] + table[i+1][j][1]
+                right = piles[j] + table[i][j-1][1]
+                if left > right:
+                    table[i][j] = (left, table[i+1][j][0])
+                else:
+                    table[i][j] = (right, table[i][j-1][0])
 
+        res = table[0][len(piles)-1]
+        return res[0] > res[1]
 
+    def test(self, nums: List[List[int]]):
+        for j in range(0, len(nums)):
+            for i in range(0, len(nums)-j):
+                print(nums[i][i+j])
+            break
 
-
-n = 4
+nums = [[1, 2, 3, 4, 5],
+        [6, 7, 8, 9, 0],
+        [1, 2, 3, 4, 5],
+        [6, 7, 8, 9, 0],
+        [1, 2, 3, 4, 5]]
+p = [5, 3, 4, 5]
 solution = Solution()
-print(solution.divisorGame(n))
+print(solution.stoneGame(p))
+
 

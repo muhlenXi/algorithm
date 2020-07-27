@@ -8,18 +8,22 @@
 
 import Foundation
 
-func binarySearch(_ nums: [Int], _ target: Int) -> Int {
-    var left = 0
-    var right = ...
-    while ... {
-        let mid = (left + right) / 2
-        if nums[mid] == target {
-            ...
-        } else if nums[mid] < target {
-            ...
-        } else if nums[mid] > target {
-            ...
+func isSubsequence(_ s: String, _ t: String) -> Bool {
+    guard s.count > 0 else { return true }
+    
+    let ss = s.map { return $0 }
+    var si = 0
+    for element in t {
+        if element == ss[si] {
+            si += 1
+            if si == s.count {
+                return true
+            }
         }
     }
-    return ...
+    return false
 }
+
+let s = "abc"
+let t = "annbnncjj"
+print(isSubsequence(s, t))
