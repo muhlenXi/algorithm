@@ -8,31 +8,17 @@ class TreeNode:
         self.right = right
 
 class Solution:
-    # 95
-    def generateTrees(self, n: int) -> List[TreeNode]:
-        if n <= 0:
-            return []
-        return self.generate(1, n)
+    def divisorGame(self, N: int) -> bool:
+        return N % 2 == 0
 
-
-    def generate(self, start: int, end: int) -> List[TreeNode]:
-        if start > end:
-            return [None]
-        list = []
-        for i in range(start, end+1):
-            lefts = self.generate(start, i - 1)
-            rights = self.generate(i + 1, end)
-            for left in lefts:
-                for right in rights:
-                    node = TreeNode(i)
-                    node.left = left
-                    node.right = right
-                    list.append(node)
-
-        return list
+    def test(self):
+        s = "123"
+        print(s[1:])
 
 
 
-n = 3
+
+n = 4
 solution = Solution()
-print(solution.generateTrees(n))
+print(solution.divisorGame(n))
+

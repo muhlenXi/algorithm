@@ -8,82 +8,18 @@
 
 import Foundation
 
-// 232
-class MyQueue {
-    private var inStack = MyStack()
-    private var outStack = MyStack()
-
-    /** Initialize your data structure here. */
-    init() {
-        
-    }
-    
-    /** Push element x to the back of queue. */
-    func push(_ x: Int) {
-        inStack.push(x)
-    }
-    
-    /** Removes the element from in front of queue and returns that element. */
-    func pop() -> Int {
-        if outStack.empty() {
-            while inStack.empty() == false {
-                outStack.push(inStack.pop())
-            }
+func binarySearch(_ nums: [Int], _ target: Int) -> Int {
+    var left = 0
+    var right = ...
+    while ... {
+        let mid = (left + right) / 2
+        if nums[mid] == target {
+            ...
+        } else if nums[mid] < target {
+            ...
+        } else if nums[mid] > target {
+            ...
         }
-        return outStack.pop()
     }
-    
-    /** Get the front element. */
-    func peek() -> Int {
-        if outStack.empty() {
-            while inStack.empty() == false {
-                outStack.push(inStack.pop())
-            }
-        }
-        return outStack.top()
-    }
-    
-    /** Returns whether the queue is empty. */
-    func empty() -> Bool {
-        return inStack.empty() && outStack.empty()
-    }
+    return ...
 }
-
-class MyStack {
-    
-    private var list = [Int]()
-
-    /** Initialize your data structure here. */
-    init() {
-        
-    }
-    
-    /** Push element x onto stack. */
-    func push(_ x: Int) {
-        list.append(x)
-    }
-    
-    /** Removes the element on top of the stack and returns that element. */
-    func pop() -> Int {
-        return list.removeLast()
-    }
-    
-    /** Get the top element. */
-    func top() -> Int {
-        return list.last ?? 0
-    }
-    
-    /** Returns whether the stack is empty. */
-    func empty() -> Bool {
-        return list.isEmpty
-    }
-    
-    func count() -> Int {
-        return list.count
-    }
-}
-
-
-
-
-
