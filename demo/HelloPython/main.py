@@ -8,37 +8,73 @@ class TreeNode:
         self.right = right
 
 class Solution:
-    def stoneGame(self, piles: [int]) -> bool:
-        table = [[(0, 0) for i in range(len(piles))] for j in range(len(piles))]
-        for i in range(len(piles)):
-            table[i][i] = (piles[i], 0)
+    # 递归
+    def maxDepth(self, root: TreeNode) -> int:
+        if root is None:
+            return 0
+        left_depth = self.maxDepth(root.left)
+        right_depth = self.maxDepth(root.right)
+        return max(left_depth, right_depth) + 1
 
-        for l in range(1, len(piles)):
-            for i in range(0, len(piles)-l):
-                j = i + l
-                left = piles[i] + table[i+1][j][1]
-                right = piles[j] + table[i][j-1][1]
-                if left > right:
-                    table[i][j] = (left, table[i+1][j][0])
-                else:
-                    table[i][j] = (right, table[i][j-1][0])
+    # bfs
+    def maxDepth1(self, root: TreeNode) -> int:
+        if root is None:
+            return 0
 
-        res = table[0][len(piles)-1]
-        return res[0] > res[1]
+        queue = [[root]]
+        depth = 1
+        while len(queue) > 0:
+            nodes = queue.pop()
+            childs = []
+            for node in nodes:
+                if node.left != None:
+                    childs.append(node.left)
+                if node.right != None:
+                    childs.append(node.right)
 
-    def test(self, nums: List[List[int]]):
-        for j in range(0, len(nums)):
-            for i in range(0, len(nums)-j):
-                print(nums[i][i+j])
-            break
+            if len(childs) > 0:
+                queue.append(childs)
+                depth += 1
 
-nums = [[1, 2, 3, 4, 5],
-        [6, 7, 8, 9, 0],
-        [1, 2, 3, 4, 5],
-        [6, 7, 8, 9, 0],
-        [1, 2, 3, 4, 5]]
-p = [5, 3, 4, 5]
+        return depth
+
+    # dfs
+    def maxDepth2(self, root: TreeNode) -> int:
+        if root == None:
+            return 0
+        if root.left == None and root.right == None:
+            return 1
+        paths = []
+        depths = []
+        self.dfs(root, paths, depths)
+        return max(depths)
+
+    def dfs(self, root: TreeNode, paths: List[int], depths: List[int]):
+        if root == None:
+            return
+        paths.append(root.val)
+        if root.left == None and root.right == None:
+            depths.append(len(paths))
+
+        self.dfs(root.left, paths, depths)
+        self.dfs(root.right, paths, depths)
+        paths.pop()
+
 solution = Solution()
-print(solution.stoneGame(p))
+
+t1 = TreeNode(1)
+t2 = TreeNode(2)
+t3 = TreeNode(3)
+t4 = TreeNode(4)
+t5 = TreeNode(5)
+
+t1.left = t2
+t1.right = t3
+t3.left = t4
+t3.right = t5
+
+print(solution.maxDepth(t1))
+print(solution.maxDepth1(t1))
+print(solution.maxDepth2(t1))
 
 
