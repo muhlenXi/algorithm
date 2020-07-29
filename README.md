@@ -1,4 +1,14 @@
-# Leetcode 每日一题
+# 关于
+
+
+每天努力弄懂一道算法题，体会其中的奥妙。
+
+功不唐捐，玉汝于成！
+
+
+## Leetcode 每日一题
+
+根据 Tag 进行索引和分类。
               
 - [Array](./solution/array/README_Array.md)     
           
