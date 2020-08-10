@@ -8,73 +8,54 @@ class TreeNode:
         self.right = right
 
 class Solution:
-    # 递归
-    def maxDepth(self, root: TreeNode) -> int:
-        if root is None:
-            return 0
-        left_depth = self.maxDepth(root.left)
-        right_depth = self.maxDepth(root.right)
-        return max(left_depth, right_depth) + 1
+    # 198
+    def rob(self, nums: List[int]) -> int:
+        return self.dp(nums)
+        # memo = [-1 for i in range(len(nums))]
+        # return self.searchWithMemo(nums, memo, 0)
 
-    # bfs
-    def maxDepth1(self, root: TreeNode) -> int:
-        if root is None:
+    def search(self, nums: List[int], start: int) -> int:
+        if start >= len(nums):
             return 0
 
-        queue = [[root]]
-        depth = 1
-        while len(queue) > 0:
-            nodes = queue.pop()
-            childs = []
-            for node in nodes:
-                if node.left != None:
-                    childs.append(node.left)
-                if node.right != None:
-                    childs.append(node.right)
+        do = nums[start] + self.search(nums, start + 2)
+        not_do = self.search(nums, start + 1)
+        return  max(do, not_do)
 
-            if len(childs) > 0:
-                queue.append(childs)
-                depth += 1
-
-        return depth
-
-    # dfs
-    def maxDepth2(self, root: TreeNode) -> int:
-        if root == None:
+    def searchWithMemo(self, nums: List[int], memo: List[int], start: int) -> int:
+        if start >= len(nums):
             return 0
-        if root.left == None and root.right == None:
-            return 1
-        paths = []
-        depths = []
-        self.dfs(root, paths, depths)
-        return max(depths)
 
-    def dfs(self, root: TreeNode, paths: List[int], depths: List[int]):
-        if root == None:
-            return
-        paths.append(root.val)
-        if root.left == None and root.right == None:
-            depths.append(len(paths))
+        if memo[start] != -1:
+            return memo[start]
 
-        self.dfs(root.left, paths, depths)
-        self.dfs(root.right, paths, depths)
-        paths.pop()
+        do = nums[start] + self.searchWithMemo(nums, memo, start + 2)
+        not_do = self.searchWithMemo(nums, memo, start + 1)
+        memo[start] = max(do, not_do)
+        return memo[start]
 
+    def dp(self, nums: List[int]) -> int:
+        table = [0 for i in range(len(nums))]
+        if len(nums) == 0:
+            return 0
+        if len(nums) == 1:
+            return nums[0]
+        if len(nums) == 2:
+            return max(nums[0], nums[1])
+
+        table[0] = nums[0]
+        table[1] = nums[1]
+        i = 2
+        while i < len(nums):
+            table[i] = max(table[i-1], table[i-2] + nums[i])
+            i += 1
+        return table[len(nums)-1]
+
+
+
+
+list = [1, 2, 3, 1]
 solution = Solution()
-
-t1 = TreeNode(1)
-t2 = TreeNode(2)
-t3 = TreeNode(3)
-t4 = TreeNode(4)
-t5 = TreeNode(5)
-
-t1.left = t2
-t1.right = t3
-t3.left = t4
-t3.right = t5
-
-print(solution.maxDepth(t1))
-print(solution.maxDepth1(t1))
-print(solution.maxDepth2(t1))
+print(solution.rob(list))
 
 
