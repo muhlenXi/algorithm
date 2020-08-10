@@ -8,17 +8,54 @@ class TreeNode:
         self.right = right
 
 class Solution:
-    def divisorGame(self, N: int) -> bool:
-        return N % 2 == 0
+    # 198
+    def rob(self, nums: List[int]) -> int:
+        return self.dp(nums)
+        # memo = [-1 for i in range(len(nums))]
+        # return self.searchWithMemo(nums, memo, 0)
 
-    def test(self):
-        s = "123"
-        print(s[1:])
+    def search(self, nums: List[int], start: int) -> int:
+        if start >= len(nums):
+            return 0
+
+        do = nums[start] + self.search(nums, start + 2)
+        not_do = self.search(nums, start + 1)
+        return  max(do, not_do)
+
+    def searchWithMemo(self, nums: List[int], memo: List[int], start: int) -> int:
+        if start >= len(nums):
+            return 0
+
+        if memo[start] != -1:
+            return memo[start]
+
+        do = nums[start] + self.searchWithMemo(nums, memo, start + 2)
+        not_do = self.searchWithMemo(nums, memo, start + 1)
+        memo[start] = max(do, not_do)
+        return memo[start]
+
+    def dp(self, nums: List[int]) -> int:
+        table = [0 for i in range(len(nums))]
+        if len(nums) == 0:
+            return 0
+        if len(nums) == 1:
+            return nums[0]
+        if len(nums) == 2:
+            return max(nums[0], nums[1])
+
+        table[0] = nums[0]
+        table[1] = nums[1]
+        i = 2
+        while i < len(nums):
+            table[i] = max(table[i-1], table[i-2] + nums[i])
+            i += 1
+        return table[len(nums)-1]
 
 
 
 
-n = 4
+list = [1, 2, 3, 1]
 solution = Solution()
-print(solution.divisorGame(n))
+print(solution.rob(list))
+
 
