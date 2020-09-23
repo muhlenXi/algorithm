@@ -19,11 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    Person *person = [[Person alloc] init];
-    [person performSelector:@selector(sayHello)];
-    [person performSelector:@selector(sayByebye)];
-    
-    
+   
     
 }
 
