@@ -1,5 +1,6 @@
 from typing import List
 import collections
+import sys
 
 class TreeNode:
     def __init__(self, val = 0, left = None, right = None):
@@ -7,55 +8,44 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
 class Solution:
-    # 198
-    def rob(self, nums: List[int]) -> int:
-        return self.dp(nums)
-        # memo = [-1 for i in range(len(nums))]
-        # return self.searchWithMemo(nums, memo, 0)
+    def recoverTree(self, root: TreeNode) -> None:
+        pre = None
+        nodes = []
+        self.recover(root, pre, nodes)
+        if len(nodes) >= 2:
+            nodes[0].val, nodes[len(nodes)-1].val = nodes[len(nodes)-1].val, nodes[0].val
 
-    def search(self, nums: List[int], start: int) -> int:
-        if start >= len(nums):
-            return 0
 
-        do = nums[start] + self.search(nums, start + 2)
-        not_do = self.search(nums, start + 1)
-        return  max(do, not_do)
+    def recover(self, root: TreeNode, pre: TreeNode, nodes: List[TreeNode]):
+        if root == None:
+            return
 
-    def searchWithMemo(self, nums: List[int], memo: List[int], start: int) -> int:
-        if start >= len(nums):
-            return 0
+        self.recover(root.left, pre, nodes)
 
-        if memo[start] != -1:
-            return memo[start]
+        if pre != None and root.val < pre.val:
+            nodes.append(pre)
+            nodes.append(root)
+        pre = root
 
-        do = nums[start] + self.searchWithMemo(nums, memo, start + 2)
-        not_do = self.searchWithMemo(nums, memo, start + 1)
-        memo[start] = max(do, not_do)
-        return memo[start]
-
-    def dp(self, nums: List[int]) -> int:
-        table = [0 for i in range(len(nums))]
-        if len(nums) == 0:
-            return 0
-        if len(nums) == 1:
-            return nums[0]
-        if len(nums) == 2:
-            return max(nums[0], nums[1])
-
-        table[0] = nums[0]
-        table[1] = nums[1]
-        i = 2
-        while i < len(nums):
-            table[i] = max(table[i-1], table[i-2] + nums[i])
-            i += 1
-        return table[len(nums)-1]
+        self.recover(root.right, pre, nodes)
 
 
 
-
-list = [1, 2, 3, 1]
 solution = Solution()
-print(solution.rob(list))
+t1 = TreeNode(1)
+t2 = TreeNode(2)
+t3 = TreeNode(3)
+t4 = TreeNode(4)
+t5 = TreeNode(5)
+t6 = TreeNode(6)
 
+t3.left = t1
+t3.right = t4
+t4.left = t2
+
+
+
+print(solution.recoverTree(t3))
 
