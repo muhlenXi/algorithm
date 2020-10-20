@@ -8,14 +8,104 @@
 
 import Foundation
 
-let a = [[0, 2], [5, 10], [13, 23], [24, 25]]
-let b = [[1, 5], [8, 12], [15, 24], [25, 26]]
 
-func intervalIntersection(_ A: [[Int]], _ B: [[Int]]) -> [[Int]] {
-    
+t1.left = t2
+//t1.right = t3
+//t3.left = t4
+//t3.right = t5
+
+func serialize(_ root: TreeNode?) -> String {
+    return traverse(root)
 }
 
-let c = intervalIntersection(a, b)
-print(c)
+func deserialize(_ data: String) -> TreeNode? {
+    // 分解
+    var values = data.components(separatedBy: CharacterSet(arrayLiteral: "[", ",", "]"))
+    values = values.filter { $0.count > 0 }
+    
+    guard values.count > 0 else {
+        return nil
+    }
+    // 组装第 1 层
+    var index = 0
+    let root = makeTreeNode(values[0])
+    var lastRows = [TreeNode?]()
+    lastRows.append(root)
+    // 组装第 2...层
+    while lastRows.count > 0 {
+        var childs = [TreeNode?]()
+        for node in lastRows {
+            if index + 1 < values.count {
+                node?.left = makeTreeNode(values[index+1])
+                index += 1
+                if let l = node?.left {
+                    childs.append(l)
+                }
+            }
+            if index + 1 < values.count {
+                node?.right = makeTreeNode(values[index+1])
+                index += 1
+                if let r = node?.right {
+                    childs.append(r)
+                }
+            }
+        }
+        lastRows = childs
+    }
+    
+    return root
+}
+
+func makeTreeNode(_ value: String) -> TreeNode? {
+    if let val = Int(value) {
+        return TreeNode(val)
+    } else {
+        return nil
+    }
+}
+
+func traverse(_ root: TreeNode?) -> String {
+    guard let root = root else {
+        return "null"
+    }
+    // 层序遍历
+    var nodes = [[TreeNode?]]()
+    nodes.append([root])
+    var result = [String]()
+    while nodes.count > 0 {
+        let rows = nodes.removeFirst()
+        var childs = [TreeNode?]()
+        for node in rows {
+            if let node = node {
+                result.append("\(node.val)")
+                childs.append(node.left)
+                childs.append(node.right)
+            } else {
+                result.append("null")
+            }
+        }
+        if childs.count > 0 {
+            nodes.append(childs)
+        }
+    }
+    
+    while result.last == "null" {
+        result.removeLast()
+    }
+    
+    return "[" + result.joined(separator: ",") + "]"
+}
+
+let s = serialize(t1)
+
+let ss = "[1,2,3,null,null,4,5,6,7]"
+print(ss)
+let t = deserialize(ss)
+print(t)
+print(serialize(t))
+
+
+
+
 
 
