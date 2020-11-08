@@ -1,13 +1,8 @@
-//
-//  main.swift
-//  HelloSwift
-//
-//  Created by muhlenXi on 2019/9/19.
-//  Copyright © 2019 muhlenXi. All rights reserved.
-//
+32-II
 
-import Foundation
+Swift
 
+```swift
 func levelOrder(_ root: TreeNode?) -> [[Int]] {
     var values = [[Int]]()
     guard let root = root else { return values }
@@ -39,6 +34,4 @@ func levelOrder(_ root: TreeNode?) -> [[Int]] {
     
     return values
 }
-
-
-
+```

@@ -1,22 +1,18 @@
-//
-//  main.swift
-//  HelloSwift
-//
-//  Created by muhlenXi on 2019/9/19.
-//  Copyright © 2019 muhlenXi. All rights reserved.
-//
+032
 
-import Foundation
+Swift
 
+```swift
 func levelOrder(_ root: TreeNode?) -> [[Int]] {
     var values = [[Int]]()
     guard let root = root else { return values }
     
     var nodes = [[TreeNode]]()
     nodes.append([root])
-
+    var flag: Int = -1  // 打印标志
     while nodes.count > 0 {
         let temps = nodes.removeLast()
+        flag += 1
         
         var childs = [TreeNode]()
         var nodesValues = [Int]()
@@ -33,12 +29,13 @@ func levelOrder(_ root: TreeNode?) -> [[Int]] {
             nodes.append(childs)
         }
         if !nodesValues.isEmpty {
+            if flag % 2 == 1 {
+                nodesValues.reverse()
+            }
             values.append(nodesValues)
         }
     }
     
     return values
 }
-
-
-
+```
