@@ -8,44 +8,26 @@ class TreeNode:
         self.left = left
         self.right = right
 
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
 
 class Solution:
-    def recoverTree(self, root: TreeNode) -> None:
-        pre = None
-        nodes = []
-        self.recover(root, pre, nodes)
-        if len(nodes) >= 2:
-            nodes[0].val, nodes[len(nodes)-1].val = nodes[len(nodes)-1].val, nodes[0].val
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
+        a, b = headA, headB
 
+        while a != b:
+            a = a.next if a.next else headB
+            b = b.next if b.next else headA
 
-    def recover(self, root: TreeNode, pre: TreeNode, nodes: List[TreeNode]):
-        if root == None:
-            return
+        return a
 
-        self.recover(root.left, pre, nodes)
-
-        if pre != None and root.val < pre.val:
-            nodes.append(pre)
-            nodes.append(root)
-        pre = root
-
-        self.recover(root.right, pre, nodes)
-
+    def com(self, a: int, b: int) -> int:
+        c = a if a > b else b
+        return c
 
 
 solution = Solution()
-t1 = TreeNode(1)
-t2 = TreeNode(2)
-t3 = TreeNode(3)
-t4 = TreeNode(4)
-t5 = TreeNode(5)
-t6 = TreeNode(6)
-
-t3.left = t1
-t3.right = t4
-t4.left = t2
-
-
-
-print(solution.recoverTree(t3))
-
+print(solution.com(3, 5))
