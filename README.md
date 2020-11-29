@@ -7,7 +7,7 @@
 
 ## Book
 
-- [剑指 Offer 第二版](./sword/README.md)
+- [剑指 Offer 第二版](./README_SO.md)
 
 ## Leetcode 每日一题
 
